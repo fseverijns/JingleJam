@@ -19,14 +19,18 @@ public class Player : Movable
     private Vector3 pickupDropPosition = new Vector3(0, 0, 1);
     private List<Pickup> pickupsInRange = new List<Pickup>();
 
+    [Header("Respawn")]
+    [SerializeField]
+    private GameObject spawnPoint;
+    [SerializeField]
+    private float respawnDelay;
+
     public Vector3 PickupHeldPosition { get => transform.position + pickupHeldPosition; }
     public Pickup CarryingPickup { get; private set; }
 
     public Vector3 ExternalMovement { get; set; }
 
     public Vector3 FacingDirection { get; private set; }
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -112,6 +116,24 @@ public class Player : Movable
             CarryingPickup.Drop();
             CarryingPickup = null;
         }
+    }
+
+    public void Kill()
+    {
+        if(CarryingPickup)
+        {
+            Destroy(CarryingPickup.gameObject);
+        }
+
+        pickupsInRange.Clear();
+        Invoke("Respawn", respawnDelay);
+        gameObject.SetActive(false);
+    }
+
+    public void Respawn()
+    {
+        transform.position = spawnPoint.transform.position;
+        gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
