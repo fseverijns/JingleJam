@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SphereCollider))]
-public class Pickup : MonoBehaviour
+public class Pickup : Movable
 {
     private SphereCollider sphereCollider;
     private Player currentOwner;
-    private bool pickedUpByPlayer = false;
-    public bool snapToPlayer = false;
+    private bool snapToPlayer = false;
+
+    public Vector3 ExternalMovement { get; set; }
+    public bool PickedUpByPlayer { get; private set; }
 
     // Start is called before the first frame update
     void Start()
@@ -29,17 +31,27 @@ public class Pickup : MonoBehaviour
             snapToPlayer = false;
             transform.position = new Vector3(transform.position.x, 0, transform.position.z);
         }
+
+        UpdateMovement();
+    }
+
+    protected override void UpdateMovement()
+    {
+        if(!PickedUpByPlayer)
+        {
+            base.UpdateMovement();
+        }
     }
 
     public void PickUp(Player player)
     {
-        if(pickedUpByPlayer)
+        if(PickedUpByPlayer)
         {
             return;
         }
 
         currentOwner = player;
-        pickedUpByPlayer = true;
+        PickedUpByPlayer = true;
         sphereCollider.enabled = false;
         StopAllCoroutines();
         StartCoroutine(MoveToPlayer());
@@ -47,7 +59,7 @@ public class Pickup : MonoBehaviour
 
     public void Drop()
     {
-        pickedUpByPlayer = false;
+        PickedUpByPlayer = false;
         snapToPlayer = false;
         sphereCollider.enabled = true;
         StopAllCoroutines();
