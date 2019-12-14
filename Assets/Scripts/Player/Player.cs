@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Movable
 {
     [Header("ID")]
     [SerializeField]
@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
 
     public Vector3 PickupHeldPosition { get => transform.position + pickupHeldPosition; }
     public Pickup CarryingPickup { get; private set; }
+
+    public Vector3 ExternalMovement { get; set; }
 
     public Vector3 FacingDirection { get; private set; }
 
@@ -50,7 +52,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void UpdateMovement()
+    protected override void UpdateMovement()
     {
         float horizontalMovement = Input.GetAxis("Player" + playerNum + "Horizontal");
         float verticalMovement = Input.GetAxis("Player" + playerNum + "Vertical");
@@ -71,6 +73,8 @@ public class Player : MonoBehaviour
 
         destination = transform.position + Vector3.right * (horizontalMovement * speed);
         destination += Vector3.forward * -(verticalMovement * speed);
+
+        destination += Movement;
 
         Vector3 newPosition = Vector3.Lerp(transform.position, destination, Time.deltaTime);
         transform.position = newPosition;

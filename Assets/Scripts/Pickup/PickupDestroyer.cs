@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickupDestroyer : PickupInteracter
+public class PickupDestroyer : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,8 +16,16 @@ public class PickupDestroyer : PickupInteracter
         
     }
 
-    public override void Interact(Pickup pickup)
+    private void OnTriggerEnter(Collider other)
     {
-        Destroy(pickup.gameObject);
+        Pickup pickup = other.gameObject.GetComponent<Pickup>();
+        if(pickup != null)
+        {
+            if(pickup.PickedUpByPlayer)
+            {
+                return;
+            }
+            Destroy(pickup.gameObject);
+        }
     }
 }
