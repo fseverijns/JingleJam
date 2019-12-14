@@ -7,11 +7,14 @@ public class Pickup : Movable
 {
     private SphereCollider sphereCollider;
     private Player currentOwner;
-    private bool snapToPlayer = false;
+    public bool snapToPlayer = false;
 
     public PartTypeEnum partType;
     public PartStateEnum partState;
     public PartSetEnum partSet;
+
+    [SerializeField]
+    private GameObject prompt;
 
     public Vector3 ExternalMovement { get; set; }
     public bool PickedUpByPlayer { get; private set; }
@@ -54,6 +57,7 @@ public class Pickup : Movable
             return;
         }
 
+        TogglePrompt(false);
         currentOwner = player;
         PickedUpByPlayer = true;
         sphereCollider.enabled = false;
@@ -100,5 +104,14 @@ public class Pickup : Movable
             yield return null;
         }
         yield return null;
+    }
+
+    public void TogglePrompt(bool state)
+    {
+        if(state)
+        {
+            Debug.Log("Prompt");
+        }
+        prompt.SetActive(state);
     }
 }

@@ -1,0 +1,433 @@
+fileFormatVersion: 2
+guid: 50958bb50b9bf6840ab10d44ad9709d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4934077215184864200
+    second: Lewis_Pants_Fixed
+  - first:
+      213: -8567327899227424522
+    second: Lewis_Head_Fixed
+  - first:
+      213: -3397650435823591755
+    second: Lewis_Pants_Unfixed
+  - first:
+      213: 8703690965975705540
+    second: Lewis_Head_Unfixed
+  - first:
+      213: -3015117615292729477
+    second: Lewis_Pants_Ruined
+  - first:
+      213: 5262441835024339420
+    second: Lewis_Head_Ruined
+  - first:
+      213: -4531349955829603764
+    second: Lewis_Deco_Fixed
+  - first:
+      213: 2251367813752894220
+    second: Lewis_Body_Fixed
+  - first:
+      213: 2933072022109396546
+    second: Lewis_Deco_Unfixed
+  - first:
+      213: 673223049599313561
+    second: Lewis_Body_Unfixed
+  - first:
+      213: 373640999119334568
+    second: Lewis_Deco_Ruined
+  - first:
+      213: 1816289619937804386
+    second: Lewis_Body_Ruined
+  - first:
+      213: -1828246735011076873
+    second: Toyparts_Sheet_Lewis_12
+  - first:
+      213: 3300594367831990403
+    second: Toyparts_Sheet_Lewis_13
+  - first:
+      213: 4602965117116766986
+    second: Toyparts_Sheet_Lewis_14
+  - first:
+      213: -8608039653528560072
+    second: Toyparts_Sheet_Lewis_15
+  - first:
+      213: -7016738697006676300
+    second: Toyparts_Sheet_Lewis_16
+  - first:
+      213: 1362616493758759702
+    second: Toyparts_Sheet_Lewis_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lewis_Pants_Fixed
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 727
+        width: 248
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1756465372797274993e87fd56b33fc2
+      internalID: -4934077215184864200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Head_Fixed
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 503
+        width: 269
+        height: 348
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916ab2dd24b43bd43856810ab9d72aef
+      internalID: -8567327899227424522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Pants_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 727
+        width: 248
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102ec3ad54d8e2149a4fdb0313f88fd1
+      internalID: -3397650435823591755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Head_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 503
+        width: 269
+        height: 348
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c077ee1502092140b4a328b3bd97c6c
+      internalID: 8703690965975705540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Pants_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 727
+        width: 247
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239c1078b219d5546b0e39156c96af65
+      internalID: -3015117615292729477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Head_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 503
+        width: 268
+        height: 348
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a147ae708bc4741a7fc8ede3bfa643
+      internalID: 5262441835024339420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Deco_Fixed
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 119
+        width: 147
+        height: 313
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4ff94e3ad67b440ac35688021d8511
+      internalID: -4531349955829603764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Body_Fixed
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 135
+        width: 301
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fb05f1b3f17764ba5e174bc57222c0
+      internalID: 2251367813752894220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Deco_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 119
+        width: 147
+        height: 313
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae702dcae9d239d40944c5caadf24375
+      internalID: 2933072022109396546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Body_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 135
+        width: 301
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2328e389c53de46964682bfbe28ab3
+      internalID: 673223049599313561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Deco_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 119
+        width: 146
+        height: 313
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f6e55e0d2d183479c2ebe9af8b189c
+      internalID: 373640999119334568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lewis_Body_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 135
+        width: 303
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8557e34f52f76941a0aa3cf7062f0bc
+      internalID: 1816289619937804386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4e64dc3d4c1c8334c9575ed8108ce244
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

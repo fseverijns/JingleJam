@@ -18,6 +18,7 @@ public class Player : Movable
     [SerializeField]
     private Vector3 pickupDropPosition = new Vector3(0, 0, 1);
     private List<Pickup> pickupsInRange = new List<Pickup>();
+    private Pickup closestPickup;
     private PickupInteracter interactorInRange;
 
     [Header("Respawn")]
@@ -66,6 +67,12 @@ public class Player : Movable
         }
     }
 
+    private void LateUpdate()
+    {
+        UpdatePickups();
+        UpdateInteractor();
+    }
+
     protected override void UpdateMovement()
     {
         if(PlayerFrozen)
@@ -99,22 +106,34 @@ public class Player : Movable
         transform.position = newPosition;
     }
 
-    void PickupObject()
+    void UpdatePickups()
     {
+        if(CarryingPickup)
+        {
+            return;
+        }
+
         if (pickupsInRange.Count > 0)
         {
-            Pickup closestPickup = pickupsInRange[0];
+            closestPickup = pickupsInRange[0];
 
-            if(pickupsInRange.Count > 1)
+            if (pickupsInRange.Count > 1)
             {
                 float closest = float.MaxValue;
-                foreach(Pickup p in pickupsInRange)
+                foreach (Pickup p in pickupsInRange)
                 {
                     if (p == null)
                     {
                         pickupsInRange.Remove(p);
                         continue;
                     }
+
+                    if(p.PickedUpByPlayer)
+                    {
+                        pickupsInRange.Remove(p);
+                        continue;
+                    }
+
                     float dist = Vector3.Distance(transform.position, p.transform.position);
                     if (dist < closest)
                     {
@@ -124,9 +143,25 @@ public class Player : Movable
                 }
             }
 
+            closestPickup.TogglePrompt(true);
+        }
+    }
+
+    void UpdateInteractor()
+    {
+        if(interactorInRange != null)
+        {
+            interactorInRange.TogglePrompt(this, true);
+        }
+    }
+
+    void PickupObject()
+    {
+        if (closestPickup != null)
+        {
             CarryingPickup = closestPickup;
             closestPickup.PickUp(this);
-        }
+        }         
     }
 
     void PlaceObjectOnInteracter()
@@ -163,6 +198,15 @@ public class Player : Movable
             Destroy(CarryingPickup.gameObject);
         }
 
+        if(closestPickup != null)
+        {
+            closestPickup.TogglePrompt(false);
+        }
+        if(interactorInRange != null)
+        {
+            interactorInRange.TogglePrompt(this, false);
+        }
+
         pickupsInRange.Clear();
         Invoke("Respawn", respawnDelay);
         gameObject.SetActive(false);
@@ -185,7 +229,7 @@ public class Player : Movable
     {
         if(other.gameObject.tag.Equals("Pickup"))
         {
-            Debug.Log("Pickup in Range");
+            Debug.Log("Pickup in Range", this.gameObject);
             Pickup pickup = other.GetComponent<Pickup>();
             if(pickup != null)
             {
@@ -211,12 +255,17 @@ public class Player : Movable
             Pickup pickup = other.GetComponent<Pickup>();
             if (pickup != null)
             {
+                pickup.TogglePrompt(false);
                 pickupsInRange.Remove(pickup);
             }
         }
         if (other.gameObject.tag.Equals("Interactable"))
         {
             Debug.Log("Interactable out of Range");
+            if(interactorInRange != null)
+            {
+                interactorInRange.TogglePrompt(this, false);
+            }
             interactorInRange = null;
         }
     }

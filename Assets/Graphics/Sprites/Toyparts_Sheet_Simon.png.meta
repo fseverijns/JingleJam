@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6309515378369134856
+    second: Honeydew_Pants_Fixed
+  - first:
+      213: -1985020642996701923
+    second: Toyparts_Sheet_Simon_1
+  - first:
+      213: 3176246918742893488
+    second: Honeydew_Pants_Unfixed
+  - first:
+      213: 236339608418557320
+    second: Toyparts_Sheet_Simon_3
+  - first:
+      213: -6015464923024352540
+    second: Honeydew_Pants_Ruined
+  - first:
+      213: -9196570090009495921
+    second: Toyparts_Sheet_Simon_5
+  - first:
+      213: -3707748591291926145
+    second: Honeydew_Head_Fixed
+  - first:
+      213: -938599260691798235
+    second: Toyparts_Sheet_Simon_7
+  - first:
+      213: 1287120253588996074
+    second: Honeydew_Head_Unfixed
+  - first:
+      213: 1760309935926481419
+    second: Toyparts_Sheet_Simon_9
+  - first:
+      213: -7401593252648775570
+    second: Honeydew_Head_Ruined
+  - first:
+      213: 8119912691696109103
+    second: Toyparts_Sheet_Simon_11
+  - first:
+      213: -4876726925204741628
+    second: Honeydew_Deco_Fixed
+  - first:
+      213: 522438870408975304
+    second: Honeydew_Body_Fixed
+  - first:
+      213: -1510547870415136084
+    second: Toyparts_Sheet_Simon_14
+  - first:
+      213: -5585727039875998113
+    second: Honeydew_Deco_Unfixed
+  - first:
+      213: -3907312040945994459
+    second: Honeydew_Body_Unfixed
+  - first:
+      213: -2446964519294775679
+    second: Toyparts_Sheet_Simon_17
+  - first:
+      213: 3126452789792658407
+    second: Honeydew_Deco_Ruined
+  - first:
+      213: -8792546755379970549
+    second: Honeydew_Body_Ruined
+  - first:
+      213: 7869294532450765321
+    second: Toyparts_Sheet_Simon_20
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Honeydew_Pants_Fixed
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 724
+        width: 215
+        height: 166
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ca1cf79dff6c449b519d1467af11bb
+      internalID: 6309515378369134856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Pants_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 724
+        width: 215
+        height: 166
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc858d92447d66242a873ced51512a02
+      internalID: 3176246918742893488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Pants_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 724
+        width: 216
+        height: 166
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961667ba9c4310944874b823a4a4277d
+      internalID: -6015464923024352540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Head_Fixed
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 466
+        width: 285
+        height: 379
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abb83cadec15934d9abdd1712200f1a
+      internalID: -3707748591291926145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Head_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 466
+        width: 285
+        height: 379
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498c512802d25214e911f8cfe33cc2f2
+      internalID: 1287120253588996074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Head_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 466
+        width: 284
+        height: 379
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b704b502830f6a46ac2b39abdd4a671
+      internalID: -7401593252648775570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Deco_Fixed
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 37
+        width: 298
+        height: 381
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433c8ed34c19e1e49af52fecc25b0235
+      internalID: -4876726925204741628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Body_Fixed
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 114
+        width: 306
+        height: 204
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad1a531e3437ed449a07d605c2e9ebe
+      internalID: 522438870408975304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Deco_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 37
+        width: 298
+        height: 381
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9da31f04cc67954f9d833e36d52312e
+      internalID: -5585727039875998113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Body_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 114
+        width: 306
+        height: 204
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c86779b13e68d548b9509cb4aafd4fb
+      internalID: -3907312040945994459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Deco_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 37
+        width: 296
+        height: 381
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08be43fe1052ecb4ba96443d056757ce
+      internalID: 3126452789792658407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeydew_Body_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 114
+        width: 304
+        height: 204
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745f204e27c21e448b11ee67b87d716d
+      internalID: -8792546755379970549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d3e62f0b6e1118648a162bf90fd073ce
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
