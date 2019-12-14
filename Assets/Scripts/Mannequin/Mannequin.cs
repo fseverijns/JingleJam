@@ -27,6 +27,11 @@ public class Mannequin : PickupInteracter
 
     public override void Interact(Player player)
     {
+        if(player.playerNum != playerNumber)
+        {
+            return;
+        }
+
         Pickup pickup = player.CarryingPickup;
         if (pickup.partState != PartStateEnum.Unfixed)
         {

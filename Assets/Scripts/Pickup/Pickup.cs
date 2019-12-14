@@ -7,7 +7,7 @@ public class Pickup : Movable
 {
     private SphereCollider sphereCollider;
     private Player currentOwner;
-    private bool snapToPlayer = false;
+    public bool snapToPlayer = false;
 
     public PartTypeEnum partType;
     public PartStateEnum partState;
