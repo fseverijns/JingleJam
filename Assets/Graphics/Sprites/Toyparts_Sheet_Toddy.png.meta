@@ -1,0 +1,541 @@
+fileFormatVersion: 2
+guid: 05d7ff80586e2e544a05a6e3b0a54057
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4933821522283819044
+    second: Toddy_Pants_Fixed
+  - first:
+      213: -7580330995457774586
+    second: Toddy_Head_Fixed
+  - first:
+      213: 3276379020930233135
+    second: Toddy_Pants_Unfixed
+  - first:
+      213: -8250445947730586055
+    second: Toddy_Head_Unfixed
+  - first:
+      213: 2262207783786158915
+    second: Toddy_Pants_Ruined
+  - first:
+      213: 6046472604478583365
+    second: Toddy_Head_Ruined
+  - first:
+      213: 7793333647224013196
+    second: Toyparts_Sheet_Toddy_6
+  - first:
+      213: -8714908065622879428
+    second: Toyparts_Sheet_Toddy_7
+  - first:
+      213: -6935331236041362582
+    second: Toyparts_Sheet_Toddy_8
+  - first:
+      213: -4987588603004433683
+    second: Toddy_Deco_Fixed
+  - first:
+      213: -8436491344642602112
+    second: Toyparts_Sheet_Toddy_10
+  - first:
+      213: 7723297184633764601
+    second: Toddy_Deco_Unfixed
+  - first:
+      213: -4528636434162482634
+    second: Toyparts_Sheet_Toddy_12
+  - first:
+      213: 6953329050189589846
+    second: Toddy_Deco_Ruined
+  - first:
+      213: -3506871581457480356
+    second: Toyparts_Sheet_Toddy_14
+  - first:
+      213: 5041828707276086282
+    second: Toyparts_Sheet_Toddy_15
+  - first:
+      213: 2523860197500333704
+    second: Toyparts_Sheet_Toddy_16
+  - first:
+      213: -779889890390922606
+    second: Toyparts_Sheet_Toddy_17
+  - first:
+      213: -8726920258994567965
+    second: Toyparts_Sheet_Toddy_18
+  - first:
+      213: 9203213950386428698
+    second: Toyparts_Sheet_Toddy_19
+  - first:
+      213: -5490599718978107641
+    second: Toyparts_Sheet_Toddy_20
+  - first:
+      213: -4204143863009315061
+    second: Toyparts_Sheet_Toddy_21
+  - first:
+      213: -2062447967479995799
+    second: Toyparts_Sheet_Toddy_22
+  - first:
+      213: 174546917673715763
+    second: Toyparts_Sheet_Toddy_23
+  - first:
+      213: -1858822337628587916
+    second: Toddy_Body_Fixed
+  - first:
+      213: 679021231840890235
+    second: Toyparts_Sheet_Toddy_25
+  - first:
+      213: -6146667845774730153
+    second: Toddy_Body_Unfixed
+  - first:
+      213: -8352706143503900889
+    second: Toyparts_Sheet_Toddy_27
+  - first:
+      213: -7738195936716564063
+    second: Toddy_Body_Ruined
+  - first:
+      213: 1301532542676207849
+    second: Toyparts_Sheet_Toddy_29
+  - first:
+      213: 4962440408840133497
+    second: Toyparts_Sheet_Toddy_30
+  - first:
+      213: 6210945827449158420
+    second: Toyparts_Sheet_Toddy_31
+  - first:
+      213: 7807048085454225889
+    second: Toyparts_Sheet_Toddy_32
+  - first:
+      213: -7069650192051663194
+    second: Toyparts_Sheet_Toddy_33
+  - first:
+      213: 2395654346253823963
+    second: Toyparts_Sheet_Toddy_34
+  - first:
+      213: 8481336706181902497
+    second: Toyparts_Sheet_Toddy_35
+  - first:
+      213: -3517053870397298895
+    second: Toyparts_Sheet_Toddy_36
+  - first:
+      213: -4139043705430648748
+    second: Toyparts_Sheet_Toddy_37
+  - first:
+      213: -5786434836310693336
+    second: Toyparts_Sheet_Toddy_38
+  - first:
+      213: 4732399768653901570
+    second: Toyparts_Sheet_Toddy_39
+  - first:
+      213: 4215794325872743292
+    second: Toyparts_Sheet_Toddy_40
+  - first:
+      213: 6987890798446999641
+    second: Toyparts_Sheet_Toddy_41
+  - first:
+      213: -4932750869503582880
+    second: Toyparts_Sheet_Toddy_42
+  - first:
+      213: -1021523579855585129
+    second: Toyparts_Sheet_Toddy_43
+  - first:
+      213: 5721028978418274758
+    second: Toyparts_Sheet_Toddy_44
+  - first:
+      213: -1206736305103570230
+    second: Toyparts_Sheet_Toddy_45
+  - first:
+      213: -756178961983524342
+    second: Toyparts_Sheet_Toddy_46
+  - first:
+      213: 2348547779519277438
+    second: Toyparts_Sheet_Toddy_47
+  - first:
+      213: 6123896469112597825
+    second: Toyparts_Sheet_Toddy_48
+  - first:
+      213: -832790223885630253
+    second: Toyparts_Sheet_Toddy_49
+  - first:
+      213: -5731795191757128440
+    second: Toyparts_Sheet_Toddy_50
+  - first:
+      213: -5261636380286337939
+    second: Toyparts_Sheet_Toddy_51
+  - first:
+      213: 2710507779295972152
+    second: Toyparts_Sheet_Toddy_52
+  - first:
+      213: -3279678581942178718
+    second: Toyparts_Sheet_Toddy_53
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Toddy_Pants_Fixed
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 721
+        width: 205
+        height: 181
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ef9abd0c282ba419626a17321a0684
+      internalID: 4933821522283819044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Head_Fixed
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 491
+        width: 304
+        height: 523
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e324ae388e454634bab2844e01bd8b9d
+      internalID: -7580330995457774586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Pants_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 721
+        width: 205
+        height: 181
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710e80e82a9aef24eb05a7bbcda338a5
+      internalID: 3276379020930233135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Head_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 491
+        width: 304
+        height: 523
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b9966d0528b7d4ca6ef4db60e89542
+      internalID: -8250445947730586055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Pants_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 721
+        width: 206
+        height: 181
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc4f7288305acc499c0fa23d10a5aa0
+      internalID: 2262207783786158915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Head_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 491
+        width: 305
+        height: 523
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8912a38c0cd097040bcbd75de2e28f18
+      internalID: 6046472604478583365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Deco_Fixed
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 38
+        width: 191
+        height: 573
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373979d160194b54ab8e5e9df0935226
+      internalID: -4987588603004433683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Deco_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 38
+        width: 191
+        height: 573
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c84f8ba59a0c54a9c0040855fef269
+      internalID: 7723297184633764601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Deco_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 38
+        width: 191
+        height: 573
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf3755807817e44c92ae565d76bab73
+      internalID: 6953329050189589846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Body_Fixed
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 103
+        width: 307
+        height: 223
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0542f11dc8a2026489fa8fae7fa9e1a9
+      internalID: -1858822337628587916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Body_Unfixed
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 103
+        width: 307
+        height: 223
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e82ee8ede9025944ac65db0740b805e
+      internalID: -6146667845774730153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toddy_Body_Ruined
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 103
+        width: 307
+        height: 223
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf93129009ea174599dced99d3aefe7
+      internalID: -7738195936716564063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d0a6edc87a52d454ca8ce46d569a88dd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
