@@ -95,6 +95,11 @@ public class Player : Movable
                 float closest = float.MaxValue;
                 foreach(Pickup p in pickupsInRange)
                 {
+                    if (p == null)
+                    {
+                        pickupsInRange.Remove(p);
+                        continue;
+                    }
                     float dist = Vector3.Distance(transform.position, p.transform.position);
                     if (dist < closest)
                     {
