@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ebdff3984adb1224dbf2bb49bb511107
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wisheeText: {instanceID: 0}
+  - headSprite: {instanceID: 0}
+  - bodySprite: {instanceID: 0}
+  - legsSprite: {instanceID: 0}
+  - decorationSprite: {instanceID: 0}
+  - wisheeOptions: {fileID: 11400000, guid: 61934b9c7e0ba3e42bc224e9de1b15e0, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
