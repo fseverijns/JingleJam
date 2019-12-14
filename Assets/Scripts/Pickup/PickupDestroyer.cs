@@ -19,6 +19,11 @@ public class PickupDestroyer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.isTrigger)
+        {
+            return;
+        }
+
         Pickup pickup = other.gameObject.GetComponent<Pickup>();
         if(pickup != null)
         {

@@ -25,12 +25,12 @@ public class MinigameController : MonoBehaviour
     private Workbench workbench;
 
     private float currentArrowValue = 0.5f;
-    private bool minigameActive = true;
+    private bool minigameActive = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(this.MoveArrow());
     }
 
     public void StartMinigame(Player player, Workbench workbench)
@@ -38,19 +38,24 @@ public class MinigameController : MonoBehaviour
         this.player = player;
         this.workbench = workbench;
         minigameActive = true;
-        StartCoroutine(MoveArrow());
+    }
+
+    private void StartMiniGameDelayed()
+    {
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Player"+player.playerNum+"Interact"))
+        if(minigameActive)
         {
-            if(minigameActive)
+            if (Input.GetButtonDown("Player" + player.playerNum + "Interact"))
             {
                 FinishMinigame();
             }
         }
+        
     }
 
     public void FinishMinigame()
@@ -59,11 +64,11 @@ public class MinigameController : MonoBehaviour
 
         if (currentArrowValue >= minMargin && currentArrowValue <= maxMargin)
         {
-            //SUCCESS
+            workbench.FinishMiniGame(player, true);
         }
         else
         {
-            //FAIL
+            workbench.FinishMiniGame(player, false);
         }
 
         Destroy(gameObject);
@@ -80,13 +85,9 @@ public class MinigameController : MonoBehaviour
         Vector3 arrowPosition = new Vector3(arrow.transform.localPosition.x, arrow.transform.localPosition.y, arrow.transform.localPosition.z);
 
         float t = currentArrowValue;
-        Debug.Log("1 " + t);
-        float left = transform.position.x - (imageWidth / 2f);
-        Debug.Log("2 " + left);
-        float right = transform.position.x + (imageWidth / 2f);
-        Debug.Log("3 " + right);
+        float left = transform.localPosition.x - (imageWidth / 2f);
+        float right = transform.localPosition.x + (imageWidth / 2f);
         float current = Mathf.Lerp(left, right, t);
-        Debug.Log("4 " + current);
 
         while (minigameActive)
         {

@@ -25,6 +25,11 @@ public class Workbench : PickupInteracter
             return;
         }
 
+        if(player.CarryingPickup.partState != PartStateEnum.Unfixed)
+        {
+            return;
+        }
+
         player.FreezePlayer();
         player.transform.position = playerPosition.position;
         player.CarryingPickup.snapToPlayer = false;
@@ -37,12 +42,12 @@ public class Workbench : PickupInteracter
 
     private void SpawnMinigame(Player player)
     {
-       
         if (minigames.Count > 0)
         {
             int randomMinigameIndex = Random.Range(0, minigames.Count - 1);
             MinigameController minigame = minigames[randomMinigameIndex];
-            Instantiate(minigame, minigameContainer);
+            MinigameController instantiatedMinigame = Instantiate(minigame, minigameContainer);
+            instantiatedMinigame.StartMinigame(player, this);
         }
     }
 
