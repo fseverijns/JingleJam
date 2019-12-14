@@ -26,6 +26,8 @@ public class Player : Movable
     [SerializeField]
     private float respawnDelay;
 
+    public bool FreezePlayer { get; private set; }
+
     public Vector3 PickupHeldPosition { get => transform.position + pickupHeldPosition; }
     public Pickup CarryingPickup { get; private set; }
 
@@ -66,6 +68,11 @@ public class Player : Movable
 
     protected override void UpdateMovement()
     {
+        if(FreezePlayer)
+        {
+            return;
+        }
+
         float horizontalMovement = Input.GetAxis("Player" + playerNum + "Horizontal");
         float verticalMovement = Input.GetAxis("Player" + playerNum + "Vertical");
 
@@ -174,12 +181,12 @@ public class Player : Movable
             }
         }   
 
-        if (other.gameObject.tag.Equals("Interacterable"))
+        if (other.gameObject.tag.Equals("Interactable"))
         {
-            Mannequin mannequin = other.GetComponent<Mannequin>();
-            if(mannequin != null)
+            PickupInteracter interactor = other.GetComponent<PickupInteracter>();
+            if(interactor != null)
             {
-                interactorInRange = mannequin;
+                interactorInRange = interactor;
             }
         }
     }
@@ -195,7 +202,7 @@ public class Player : Movable
                 pickupsInRange.Remove(pickup);
             }
         }
-        if (other.gameObject.tag.Equals("Interacterable"))
+        if (other.gameObject.tag.Equals("Interactable"))
         {
             Debug.Log("Interactable out of Range");
             interactorInRange = null;
