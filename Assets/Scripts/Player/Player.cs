@@ -176,7 +176,9 @@ public class Player : Movable
 
     public void DestroyPickup()
     {
-        Destroy(CarryingPickup);
+        pickupsInRange.Remove(CarryingPickup);
+        Destroy(CarryingPickup.gameObject);
+        CarryingPickup = null;
     }
 
     private void OnTriggerEnter(Collider other)

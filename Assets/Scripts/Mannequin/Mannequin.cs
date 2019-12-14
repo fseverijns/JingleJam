@@ -28,9 +28,10 @@ public class Mannequin : PickupInteracter
     public override void Interact(Player player)
     {
         Pickup pickup = player.CarryingPickup;
-        if (pickup.partState == PartStateEnum.Unfixed)
+        if (pickup.partState != PartStateEnum.Unfixed)
         {
             SpriteRenderer partSprite;
+            bool correctPart = false;
 
             if (pickup.partState == PartStateEnum.Broken)
             {
@@ -44,39 +45,70 @@ public class Mannequin : PickupInteracter
             switch (pickup.partType)
             {
                 case PartTypeEnum.head:
-                    partSprite = headImage.GetComponent<SpriteRenderer>();
-                    partSprite.sprite = pickup.GetComponent<SpriteRenderer>().sprite;
-                    headImage.SetActive(true);
+                    if (!headImage.activeSelf)
+                    {
+                        correctPart = true;
+                        partSprite = headImage.GetComponent<SpriteRenderer>();
+                        partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
+                        headImage.SetActive(true);
+                    }
                     break;
                 case PartTypeEnum.body:
-                    partSprite = bodyImage.GetComponent<SpriteRenderer>();
-                    partSprite.sprite = pickup.GetComponent<SpriteRenderer>().sprite;
-                    bodyImage.SetActive(true);
+                    if (!bodyImage.activeSelf)
+                    {
+                        correctPart = true;
+                        partSprite = bodyImage.GetComponent<SpriteRenderer>();
+                        partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
+                        bodyImage.SetActive(true);
+                    }
                     break;
                 case PartTypeEnum.legs:
-                    partSprite = legsImage.GetComponent<SpriteRenderer>();
-                    partSprite.sprite = pickup.GetComponent<SpriteRenderer>().sprite;
-                    legsImage.SetActive(true);
+                    if (!legsImage.activeSelf)
+                    {
+                        correctPart = true;
+                        partSprite = legsImage.GetComponent<SpriteRenderer>();
+                        partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
+                        legsImage.SetActive(true);
+                    }
                     break;
                 case PartTypeEnum.decoration:
-                    partSprite = decorationImage.GetComponent<SpriteRenderer>();
-                    partSprite.sprite = pickup.GetComponent<SpriteRenderer>().sprite;
-                    decorationImage.SetActive(true);
+                    if (!decorationImage.activeSelf)
+                    {
+                        correctPart = true;
+                        partSprite = decorationImage.GetComponent<SpriteRenderer>();
+                        partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
+                        decorationImage.SetActive(true);
+                    }
                     break;
             }
-            partsPlaced++;
+            if (correctPart)
+            {
+                if (partsPlaced == 0)
+                {
+                    currentSet = pickup.partSet;
+                    setPartsCount++;
+                }
+                else if (pickup.partSet == currentSet)
+                {
+                    setPartsCount++;
+                }
 
-            FinishMannequin();
+                partsPlaced++;
+
+                player.DestroyPickup();
+
+                FinishMannequin();
+            } 
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        headImage.GetComponent<GameObject>().SetActive(false);
-        bodyImage.GetComponent<GameObject>().SetActive(false);
-        legsImage.GetComponent<GameObject>().SetActive(false);
-        decorationImage.GetComponent<GameObject>().SetActive(false);
+        headImage.SetActive(false);
+        bodyImage.SetActive(false);
+        legsImage.SetActive(false);
+        decorationImage.SetActive(false);
 
         partsPlaced = 0;
         brokenParts = 0;
@@ -100,10 +132,15 @@ public class Mannequin : PickupInteracter
 
             partsPlaced = 0;
 
-            bool setCompleted = false;
+            bool isSetCompleted = false;
+            if (setPartsCount == 4)
+            {
+                isSetCompleted = true;
+            }
 
-            GameManager.Instance.IncreasePlayerScore(playerNumber, brokenParts, fixedParts, setCompleted);
+            ScoreManager.Instance.IncreasePlayerScore(playerNumber, brokenParts, fixedParts, isSetCompleted);
 
+            isSetCompleted = false;
             brokenParts = 0;
             fixedParts = 0;
         }

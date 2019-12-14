@@ -18,6 +18,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
                 {
                     GameObject singleton = new GameObject(typeof(T).ToString());
                     singleton.AddComponent<T>();
+                    _instance = singleton.GetComponent<T>();
                 }
             }
             return _instance;

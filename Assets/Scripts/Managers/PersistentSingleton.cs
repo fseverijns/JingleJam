@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ public abstract class PersistentSingleton<T> : MonoBehaviour where T : Component
                 {
                     GameObject singleton = new GameObject(typeof(T).ToString());
                     singleton.AddComponent<T>();
+                    _instance = singleton.GetComponent<T>();
                 }
             }
             return _instance;

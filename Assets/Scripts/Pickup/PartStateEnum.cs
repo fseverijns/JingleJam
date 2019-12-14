@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum PartStateEnum
 {
-    Fixed,
     Unfixed,
+    Fixed,
     Broken
 }
