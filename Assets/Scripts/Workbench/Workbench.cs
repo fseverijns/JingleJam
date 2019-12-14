@@ -44,7 +44,7 @@ public class Workbench : PickupInteracter
     {
         if (minigames.Count > 0)
         {
-            int randomMinigameIndex = Random.Range(0, minigames.Count - 1);
+            int randomMinigameIndex = Random.Range(0, minigames.Count);
             MinigameController minigame = minigames[randomMinigameIndex];
             MinigameController instantiatedMinigame = Instantiate(minigame, minigameContainer);
             instantiatedMinigame.StartMinigame(player, this);
@@ -73,5 +73,24 @@ public class Workbench : PickupInteracter
     {
         recovering = false;
         //todo change graphics
+    }
+
+    public override void TogglePrompt(Player player, bool state)
+    {
+        if(state == false)
+        {
+            prompt.SetActive(false);
+            return;
+        }
+
+        if (!inUse && !recovering && player.CarryingPickup != null)
+        {
+            if (player.CarryingPickup.partState == PartStateEnum.Unfixed)
+            {
+                prompt.SetActive(true);
+                return;
+            }
+        }
+        prompt.SetActive(false);
     }
 }
