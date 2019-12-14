@@ -9,6 +9,10 @@ public class Pickup : Movable
     private Player currentOwner;
     private bool snapToPlayer = false;
 
+    public PartTypeEnum partType;
+    public PartStateEnum partState;
+    public PartSetEnum partSet;
+
     public Vector3 ExternalMovement { get; set; }
     public bool PickedUpByPlayer { get; private set; }
 

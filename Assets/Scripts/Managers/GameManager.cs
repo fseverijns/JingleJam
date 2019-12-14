@@ -10,6 +10,16 @@ public class GameManager : PersistentSingleton<GameManager>
     public bool player3Joined = false;
     public bool player4Joined = false;
 
+    private int player1Score = 0;
+    private int player2Score = 0;
+    private int player3Score = 0;
+    private int player4Score = 0;
+
+    [SerializeField]
+    private int brokenScorePerPart;
+    [SerializeField]
+    private int fixedScorePerPart;
+
     [SerializeField]
     private GameObject characterImage1;
     [SerializeField]
@@ -105,6 +115,25 @@ public class GameManager : PersistentSingleton<GameManager>
             characterImage4.SetActive(false);
             player4JoinImage.SetActive(true);
             player4JoinedImage.SetActive(false);
+        }
+    }
+
+    public void IncreasePlayerScore(int playerNumber, int brokenParts, int fixedParts, bool setCompleted)
+    {
+        switch (playerNumber)
+        {
+            case 1:
+                player1Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
+                break;
+            case 2:
+                player2Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
+                break;
+            case 3:
+                player3Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
+                break;
+            case 4:
+                player4Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
+                break;
         }
     }
 }

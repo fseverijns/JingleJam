@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class PersistentSingleton<T> : MonoBehaviour where T : Component
 {
-    private T _instance;
+    private static T _instance;
 
-    public T Instance
+    public static T Instance
     {
         get
         {
@@ -18,9 +18,13 @@ public abstract class PersistentSingleton<T> : MonoBehaviour where T : Component
                     GameObject singleton = new GameObject(typeof(T).ToString());
                     singleton.AddComponent<T>();
                 }
-                DontDestroyOnLoad(this.gameObject);
             }
             return _instance;
         }
+    }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
     }
 }

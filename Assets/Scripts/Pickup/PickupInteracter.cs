@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class PickupInteracter : MonoBehaviour
 {
-    public abstract void Interact(Pickup pickup);
+    public abstract void Interact(Player player);
 }
