@@ -6,7 +6,7 @@ public class Player : Movable
 {
     [Header("ID")]
     [SerializeField]
-    private int playerNum = 1;
+    public int playerNum = 1;
 
     [Header("Movement")]
     [SerializeField]
@@ -18,6 +18,7 @@ public class Player : Movable
     [SerializeField]
     private Vector3 pickupDropPosition = new Vector3(0, 0, 1);
     private List<Pickup> pickupsInRange = new List<Pickup>();
+    private PickupInteracter interactorInRange;
 
     [Header("Respawn")]
     [SerializeField]
@@ -52,6 +53,13 @@ public class Player : Movable
             else
             {
                 PickupObject();
+            }
+        }
+        if(Input.GetButtonDown("Player" + playerNum + "Interact"))
+        {
+            if(CarryingPickup)
+            {
+                PlaceObjectOnInteracter();
             }
         }
     }
@@ -114,6 +122,14 @@ public class Player : Movable
         }
     }
 
+    void PlaceObjectOnInteracter()
+    {
+        if (interactorInRange != null)
+        {
+            interactorInRange.Interact(this);
+        }
+    }
+
     void DropObject()
     {
         if(CarryingPickup)
@@ -141,6 +157,11 @@ public class Player : Movable
         gameObject.SetActive(true);
     }
 
+    public void DestroyPickup()
+    {
+        Destroy(CarryingPickup);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag.Equals("Pickup"))
@@ -150,6 +171,15 @@ public class Player : Movable
             if(pickup != null)
             {
                 pickupsInRange.Add(pickup);
+            }
+        }   
+
+        if (other.gameObject.tag.Equals("Interacterable"))
+        {
+            Mannequin mannequin = other.GetComponent<Mannequin>();
+            if(mannequin != null)
+            {
+                interactorInRange = mannequin;
             }
         }
     }
@@ -164,6 +194,11 @@ public class Player : Movable
             {
                 pickupsInRange.Remove(pickup);
             }
+        }
+        if (other.gameObject.tag.Equals("Interacterable"))
+        {
+            Debug.Log("Interactable out of Range");
+            interactorInRange = null;
         }
     }
 }
