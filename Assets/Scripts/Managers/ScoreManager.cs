@@ -14,22 +14,25 @@ public class ScoreManager : PersistentSingleton<ScoreManager>
     [SerializeField]
     private int fixedScorePerPart;
 
-    public void IncreasePlayerScore(int playerNumber, int brokenParts, int fixedParts, bool setCompleted)
+    public void IncreasePlayerScore(int playerNumber, int brokenParts, int fixedParts, bool setCompleted, bool wishlistComplete)
     {
-        switch (playerNumber)
+        if (wishlistComplete)
         {
-            case 1:
-                player1Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
-                break;
-            case 2:
-                player2Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
-                break;
-            case 3:
-                player3Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
-                break;
-            case 4:
-                player4Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
-                break;
+            switch (playerNumber)
+            {
+                case 1:
+                    player1Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
+                    break;
+                case 2:
+                    player2Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
+                    break;
+                case 3:
+                    player3Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
+                    break;
+                case 4:
+                    player4Score += (brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart);
+                    break;
+            }
         }
     }
 }

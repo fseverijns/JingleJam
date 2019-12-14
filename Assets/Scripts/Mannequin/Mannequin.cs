@@ -23,12 +23,21 @@ public class Mannequin : PickupInteracter
     [SerializeField]
     private GameObject decorationImage;
 
+    [Space]
+    [SerializeField]
+    private Wishlist wishlist;
+
+    private PartSetEnum headSet;
+    private PartSetEnum bodySet;
+    private PartSetEnum legsSet;
+    private PartSetEnum decorationSet;
+
     private int partsPlaced;
 
     public override void Interact(Player player)
     {
         Pickup pickup = player.CarryingPickup;
-        if (pickup.partState != PartStateEnum.Unfixed)
+        if (pickup.partState != PartStateEnum.Unfixed && playerNumber == player.playerNum)
         {
             SpriteRenderer partSprite;
             bool correctPart = false;
@@ -51,6 +60,8 @@ public class Mannequin : PickupInteracter
                         partSprite = headImage.GetComponent<SpriteRenderer>();
                         partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
                         headImage.SetActive(true);
+                        headSet = partSprite.GetComponent<Pickup>().partSet;
+
                     }
                     break;
                 case PartTypeEnum.body:
@@ -60,6 +71,7 @@ public class Mannequin : PickupInteracter
                         partSprite = bodyImage.GetComponent<SpriteRenderer>();
                         partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
                         bodyImage.SetActive(true);
+                        bodySet = partSprite.GetComponent<Pickup>().partSet;
                     }
                     break;
                 case PartTypeEnum.legs:
@@ -69,6 +81,7 @@ public class Mannequin : PickupInteracter
                         partSprite = legsImage.GetComponent<SpriteRenderer>();
                         partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
                         legsImage.SetActive(true);
+                        legsSet = partSprite.GetComponent<Pickup>().partSet;
                     }
                     break;
                 case PartTypeEnum.decoration:
@@ -78,6 +91,7 @@ public class Mannequin : PickupInteracter
                         partSprite = decorationImage.GetComponent<SpriteRenderer>();
                         partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
                         decorationImage.SetActive(true);
+                        decorationSet = partSprite.GetComponent<Pickup>().partSet;
                     }
                     break;
             }
@@ -98,7 +112,7 @@ public class Mannequin : PickupInteracter
                 player.DestroyPickup();
 
                 FinishMannequin();
-            } 
+            }
         }
     }
 
@@ -118,7 +132,44 @@ public class Mannequin : PickupInteracter
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public override void TogglePrompt(Player player, bool state)
+    {
+        if (state == false)
+        {
+            prompt.SetActive(false);
+            return;
+        }
+
+        if (player.playerNum == playerNumber && player.CarryingPickup != null)
+        {
+            if (player.CarryingPickup.partState != PartStateEnum.Unfixed)
+            {
+                if (player.CarryingPickup.partType == PartTypeEnum.head && !headImage.activeSelf)
+                {
+                    prompt.SetActive(true);
+                    return;
+                }
+                else if (player.CarryingPickup.partType == PartTypeEnum.body && !bodyImage.activeSelf)
+                {
+                    prompt.SetActive(true);
+                    return;
+                }
+                else if (player.CarryingPickup.partType == PartTypeEnum.legs && !legsImage.activeSelf)
+                {
+                    prompt.SetActive(true);
+                    return;
+                }
+                else if (player.CarryingPickup.partType == PartTypeEnum.decoration && !decorationImage.activeSelf)
+                {
+                    prompt.SetActive(true);
+                    return;
+                }
+            }
+        }
+        prompt.SetActive(false);
     }
 
     void FinishMannequin()
@@ -138,7 +189,9 @@ public class Mannequin : PickupInteracter
                 isSetCompleted = true;
             }
 
-            ScoreManager.Instance.IncreasePlayerScore(playerNumber, brokenParts, fixedParts, isSetCompleted);
+            bool wishlistCompleted = wishlist.CompleteWishlist(headSet, bodySet, legsSet, decorationSet);
+
+            ScoreManager.Instance.IncreasePlayerScore(playerNumber, brokenParts, fixedParts, isSetCompleted, wishlistCompleted);
 
             isSetCompleted = false;
             brokenParts = 0;
