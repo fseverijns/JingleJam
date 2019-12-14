@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "Wishlist/WishlistSpriteOptionsScriptableObject", order = 1)]
 public class WishlistSpriteOptionsScriptableObject : ScriptableObject
 {
-    public List<WishlistObject> wishtlistObjectOptions;
+    public List<WishlistObject> wishtlistObjectOptions = new List<WishlistObject>();
 }
 
 [System.Serializable]

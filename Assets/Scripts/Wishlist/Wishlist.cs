@@ -27,6 +27,8 @@ public class Wishlist : MonoBehaviour
 
     [SerializeField]
     private WisheeScriptableObject wisheeOptions;
+    [SerializeField]
+    private WishlistSpriteOptionsScriptableObject wishlistSpriteOptions;
 
     // Start is called before the first frame update
     void Start()
@@ -106,10 +108,92 @@ public class Wishlist : MonoBehaviour
                 decorationPart = GetRandomSet();
                 break;
         }
+
         Debug.Log("Wishlist Player: " + playernumber + " " + headPart + " " + bodyPart + " " + legsPart + " " + decorationPart);
     }
 
-
+    private void SetActualSprite()
+    {
+        foreach (WishlistObject wo in wishlistSpriteOptions.wishtlistObjectOptions)
+        {
+            if (wo.partSet == PartSetEnum.Bee)
+            {
+                if (wo.partType == PartTypeEnum.head && headPart == PartSetEnum.Bee)
+                {
+                    headSprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.body && bodyPart == PartSetEnum.Bee)
+                {
+                    bodySprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.legs && legsPart == PartSetEnum.Bee)
+                {
+                    legsSprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.decoration && decorationPart == PartSetEnum.Bee)
+                {
+                    decorationSprite.sprite = wo.sprite;
+                }
+            }
+            else if (wo.partSet == PartSetEnum.Dwarf)
+            {
+                if (wo.partType == PartTypeEnum.head && headPart == PartSetEnum.Dwarf)
+                {
+                    headSprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.body && bodyPart == PartSetEnum.Dwarf)
+                {
+                    bodySprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.legs && legsPart == PartSetEnum.Dwarf)
+                {
+                    legsSprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.decoration && decorationPart == PartSetEnum.Dwarf)
+                {
+                    decorationSprite.sprite = wo.sprite;
+                }
+            }
+            else if (wo.partSet == PartSetEnum.Scientist)
+            {
+                if (wo.partType == PartTypeEnum.head && headPart == PartSetEnum.Scientist)
+                {
+                    headSprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.body && bodyPart == PartSetEnum.Scientist)
+                {
+                    bodySprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.legs && legsPart == PartSetEnum.Scientist)
+                {
+                    legsSprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.decoration && decorationPart == PartSetEnum.Scientist)
+                {
+                    decorationSprite.sprite = wo.sprite;
+                }
+            }
+            else if (wo.partSet == PartSetEnum.Toddy)
+            {
+                if (wo.partType == PartTypeEnum.head && headPart == PartSetEnum.Toddy)
+                {
+                    headSprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.body && bodyPart == PartSetEnum.Toddy)
+                {
+                    bodySprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.legs && legsPart == PartSetEnum.Toddy)
+                {
+                    legsSprite.sprite = wo.sprite;
+                }
+                else if (wo.partType == PartTypeEnum.decoration && decorationPart == PartSetEnum.Toddy)
+                {
+                    decorationSprite.sprite = wo.sprite;
+                }
+            }
+        }
+    }
 
     private PartSetEnum GetRandomSet()
     {
