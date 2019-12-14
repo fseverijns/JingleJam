@@ -41,7 +41,7 @@ public class PickupSpawner : MonoBehaviour
             {
                 if (spawnList.Count > 0)
                 {
-                    int randomIndex = Random.Range(0, spawnList.Count - 1);
+                    int randomIndex = Random.Range(0, spawnList.Count);
                     Instantiate(spawnList[randomIndex], transform.position, Quaternion.identity);
                 }
 

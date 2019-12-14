@@ -79,7 +79,7 @@ public class MinigameController : MonoBehaviour
         float randomArrowDirection = Random.Range(-1, 1);
         int arrowDirection = (int)Mathf.Sign(randomArrowDirection);
 
-        int randomArrowStartIndex = Random.Range(0, arrowStartPositions.Count - 1);
+        int randomArrowStartIndex = Random.Range(0, arrowStartPositions.Count);
         currentArrowValue = arrowStartPositions[randomArrowStartIndex];
 
         Vector3 arrowPosition = new Vector3(arrow.transform.localPosition.x, arrow.transform.localPosition.y, arrow.transform.localPosition.z);
