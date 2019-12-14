@@ -26,7 +26,7 @@ public class Player : Movable
     [SerializeField]
     private float respawnDelay;
 
-    public bool FreezePlayer { get; private set; }
+    public bool PlayerFrozen { get; private set; }
 
     public Vector3 PickupHeldPosition { get => transform.position + pickupHeldPosition; }
     public Pickup CarryingPickup { get; private set; }
@@ -68,7 +68,7 @@ public class Player : Movable
 
     protected override void UpdateMovement()
     {
-        if(FreezePlayer)
+        if(PlayerFrozen)
         {
             return;
         }
@@ -144,6 +144,16 @@ public class Player : Movable
             CarryingPickup.Drop();
             CarryingPickup = null;
         }
+    }
+
+    public void FreezePlayer()
+    {
+        PlayerFrozen = true;
+    }
+
+    public void UnFreezePlayer()
+    {
+        PlayerFrozen = false;
     }
 
     public void Kill()
