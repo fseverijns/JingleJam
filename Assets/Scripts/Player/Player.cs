@@ -15,10 +15,16 @@ public class Player : MonoBehaviour
     [Header("Pickup")]
     [SerializeField]
     private Vector3 pickupHeldPosition = new Vector3(0, 1, 0);
+    [SerializeField]
+    private Vector3 pickupDropPosition = new Vector3(0, 0, 1);
+    private List<Pickup> pickupsInRange = new List<Pickup>();
 
     public Vector3 PickupHeldPosition { get => transform.position + pickupHeldPosition; }
+    public Pickup CarryingPickup { get; private set; }
 
-    private List<Pickup> pickupsInRange = new List<Pickup>();
+    public Vector3 FacingDirection { get; private set; }
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +37,16 @@ public class Player : MonoBehaviour
     {
         UpdateMovement();
 
-        if(Input.GetButtonDown("Player" + playerNum + "Interact"))
+        if(Input.GetButtonDown("Player" + playerNum + "Pickup"))
         {
-            Debug.Log("Pickup!");
-            PickupObject();
+            if(CarryingPickup)
+            {
+                DropObject();
+            }
+            else
+            {
+                PickupObject();
+            }
         }
     }
 
@@ -42,6 +54,18 @@ public class Player : MonoBehaviour
     {
         float horizontalMovement = Input.GetAxis("Player" + playerNum + "Horizontal");
         float verticalMovement = Input.GetAxis("Player" + playerNum + "Vertical");
+
+        if(horizontalMovement != 0 || verticalMovement != 0)
+        {
+            if (Mathf.Abs(horizontalMovement) > Mathf.Abs(verticalMovement))
+            {
+                FacingDirection = new Vector3(Mathf.Sign(horizontalMovement), 0, 0);
+            }
+            else
+            {
+                FacingDirection = new Vector3(0, 0, Mathf.Sign(-verticalMovement));
+            }
+        }
 
         Vector3 destination = transform.position;
 
@@ -56,7 +80,33 @@ public class Player : MonoBehaviour
     {
         if (pickupsInRange.Count > 0)
         {
-            pickupsInRange[0].PickUp(this);
+            Pickup closestPickup = pickupsInRange[0];
+
+            if(pickupsInRange.Count > 1)
+            {
+                float closest = float.MaxValue;
+                foreach(Pickup p in pickupsInRange)
+                {
+                    float dist = Vector3.Distance(transform.position, p.transform.position);
+                    if (dist < closest)
+                    {
+                        closestPickup = p;
+                        closest = dist;
+                    }
+                }
+            }
+
+            CarryingPickup = closestPickup;
+            closestPickup.PickUp(this);
+        }
+    }
+
+    void DropObject()
+    {
+        if(CarryingPickup)
+        {
+            CarryingPickup.Drop();
+            CarryingPickup = null;
         }
     }
 
