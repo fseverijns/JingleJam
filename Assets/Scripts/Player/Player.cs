@@ -29,6 +29,10 @@ public class Player : Movable
 
     [SerializeField]
     private AudioSource walkingSound;
+    [SerializeField]
+    private AudioSource pickupItemSound;
+    [SerializeField]
+    private AudioSource dropItemSound;
 
     public bool PlayerFrozen { get; private set; }
 
@@ -42,6 +46,8 @@ public class Player : Movable
     public bool PlayerIsMoving;
 
     private bool walkingSoundIsPlaying = false;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -220,6 +226,7 @@ public class Player : Movable
     {
         if (closestPickup != null)
         {
+            pickupItemSound.Play();
             pickupsInRange.Remove(closestPickup);
             CarryingPickup = closestPickup;
             CarryingPickup.PickUp(this);
@@ -239,6 +246,7 @@ public class Player : Movable
     {
         if(CarryingPickup)
         {
+            dropItemSound.Play();
             CarryingPickup.Drop();
             CarryingPickup = null;
         }

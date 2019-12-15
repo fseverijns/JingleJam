@@ -16,6 +16,19 @@ public class Workbench : PickupInteracter
     private float reactivationTime;
 
     [SerializeField]
+    private AudioSource putItemInWorkbenchSound;
+    [SerializeField]
+    private AudioSource workbenchSuccessSound;
+    [SerializeField]
+    private AudioSource workbenchFailSound1;
+    [SerializeField]
+    private AudioSource workbenchFailSound2;
+    [SerializeField]
+    private AudioSource workbenchFailSound3;
+    [SerializeField]
+    private AudioSource workbenchWorkingSound;
+
+    [SerializeField]
     private PickupList pickupList;
 
     private bool inUse = false;
@@ -33,12 +46,16 @@ public class Workbench : PickupInteracter
             return;
         }
 
+        putItemInWorkbenchSound.Play();
+        workbenchWorkingSound.Play();
+
         player.FreezePlayer();
         player.transform.position = playerPosition.position;
         player.CarryingPickup.snapToPlayer = false;
         player.CarryingPickup.transform.position = pickupPosition.position;
 
         inUse = true;
+
 
         SpawnMinigame(player);
     }
@@ -57,10 +74,12 @@ public class Workbench : PickupInteracter
 
     public void FinishMiniGame(Player player, bool success)
     {
+        workbenchWorkingSound.Stop();
         player.CarryingPickup.snapToPlayer = true;
         player.UnFreezePlayer();
         if(!success)
         {
+            PlayRandomFailSound();
             player.CarryingPickup.partState = PartStateEnum.Broken;
             player.CarryingPickup.spriteRenderer.sprite = pickupList.GetBrokenVersion(player.CarryingPickup);
             recovering = true;
@@ -68,11 +87,29 @@ public class Workbench : PickupInteracter
         }
         else
         {
+            workbenchSuccessSound.Play();
             player.CarryingPickup.partState = PartStateEnum.Fixed;
             player.CarryingPickup.spriteRenderer.sprite = pickupList.GetFixedVersion(player.CarryingPickup);
         }
 
         inUse = false;
+    }
+
+    private void PlayRandomFailSound()
+    {
+        int chance = Random.Range(0, 11);
+        if (chance <= 6)
+        {
+            workbenchFailSound1.Play();
+        }
+        else if (chance >= 7 && chance <= 9)
+        {
+            workbenchFailSound2.Play();
+        }
+        else
+        {
+            workbenchFailSound3.Play();
+        }
     }
 
     private void ReactivateWorkbench()
