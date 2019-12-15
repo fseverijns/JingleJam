@@ -199,6 +199,22 @@ public class GameManager : PersistentSingleton<GameManager>
         UnFreezeAllPlayers();
         StartTimer();
 
+        if (player1Joined)
+        {
+            players[0].gameObject.SetActive(true);
+        }
+        else if (player2Joined)
+        {
+            players[1].gameObject.SetActive(true);
+        }
+        else if (player3Joined)
+        {
+            players[2].gameObject.SetActive(true);
+        }
+        else if (player4Joined)
+        {
+            players[3].gameObject.SetActive(true);
+        }
     }
 
     public void StartTimer()
