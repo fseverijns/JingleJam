@@ -12,13 +12,13 @@ public class Wishlist : MonoBehaviour
     [SerializeField]
     private Text wisheeText;
     [SerializeField]
-    private SpriteRenderer headSprite;
+    private Image headSprite;
     [SerializeField]
-    private SpriteRenderer bodySprite;
+    private Image bodySprite;
     [SerializeField]
-    private SpriteRenderer legsSprite;
+    private Image legsSprite;
     [SerializeField]
-    private SpriteRenderer decorationSprite;
+    private Image decorationSprite;
 
     private PartSetEnum headPart;
     private PartSetEnum bodyPart;

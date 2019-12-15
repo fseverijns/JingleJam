@@ -52,7 +52,7 @@ public class ReadyScreen : MonoBehaviour
         {
             if (Input.GetButtonDown("Player1Pickup"))
             {
-                player1ReadyText.color = Color.green;
+                player1ReadyText.color = Color.red;
                 playersReady++;
             }
         }
@@ -60,7 +60,7 @@ public class ReadyScreen : MonoBehaviour
         {
             if (Input.GetButtonDown("Player2Pickup"))
             {
-                player2ReadyText.color = Color.green;
+                player2ReadyText.color = Color.blue;
                 playersReady++;
             }
         }
@@ -76,7 +76,7 @@ public class ReadyScreen : MonoBehaviour
         {
             if (Input.GetButtonDown("Player4Pickup"))
             {
-                player1ReadyText.color = Color.green;
+                player1ReadyText.color = Color.yellow;
                 playersReady++;
             }
         }
