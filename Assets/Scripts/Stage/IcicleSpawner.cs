@@ -12,7 +12,14 @@ public class IcicleSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach(Transform parent in IcicleParents)
+        {
+            BoxCollider col = parent.GetComponent<BoxCollider>();
+            if(col)
+            {
+                Destroy(col);
+            }
+        }
     }
 
     // Update is called once per frame

@@ -29,6 +29,20 @@ public class Workbench : PickupInteracter
     private AudioSource workbenchWorkingSound;
 
     [SerializeField]
+    private GameObject sparksParticles;
+    [SerializeField]
+    private GameObject smokeParticles;
+    [SerializeField]
+    private GameObject dustParticles;
+
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
+    [SerializeField]
+    private Sprite workbenchNormalSprite;
+    [SerializeField]
+    private Sprite workbenchBrokenSprite;
+
+    [SerializeField]
     private PickupList pickupList;
 
     private bool inUse = false;
@@ -69,11 +83,13 @@ public class Workbench : PickupInteracter
             MinigameController instantiatedMinigame = Instantiate(minigame, minigameContainer);
             Debug.Log(minigameContainer, minigameContainer.gameObject);
             instantiatedMinigame.StartMinigame(player, this);
+            dustParticles.SetActive(true);
         }
     }
 
     public void FinishMiniGame(Player player, bool success)
     {
+        dustParticles.SetActive(false);
         workbenchWorkingSound.Stop();
         player.CarryingPickup.snapToPlayer = true;
         player.UnFreezePlayer();
@@ -83,13 +99,16 @@ public class Workbench : PickupInteracter
             player.CarryingPickup.partState = PartStateEnum.Broken;
             player.CarryingPickup.spriteRenderer.sprite = pickupList.GetBrokenVersion(player.CarryingPickup);
             recovering = true;
+            spriteRenderer.sprite = workbenchBrokenSprite;
+            sparksParticles.SetActive(true);
+            smokeParticles.SetActive(true);
             Invoke("ReactivateWorkbench", reactivationTime);
         }
         else
         {
             workbenchSuccessSound.Play();
             player.CarryingPickup.partState = PartStateEnum.Fixed;
-            player.CarryingPickup.spriteRenderer.sprite = pickupList.GetFixedVersion(player.CarryingPickup);
+            player.CarryingPickup.spriteRenderer.sprite = pickupList.GetFixedVersion(player.CarryingPickup);  
         }
 
         inUse = false;
@@ -115,7 +134,9 @@ public class Workbench : PickupInteracter
     private void ReactivateWorkbench()
     {
         recovering = false;
-        //todo change graphics
+        spriteRenderer.sprite = workbenchNormalSprite;
+        sparksParticles.SetActive(false);
+        smokeParticles.SetActive(false);
     }
 
     public override void TogglePrompt(Player player, bool state)
