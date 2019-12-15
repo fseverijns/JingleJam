@@ -34,7 +34,8 @@ public class Player : Movable
 
     public Vector3 ExternalMovement { get; set; }
 
-    public Vector3 FacingDirection { get; private set; }
+    public Vector3 FacingDirection;
+    public int FacingDirectionParam;
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +94,27 @@ public class Player : Movable
             {
                 FacingDirection = new Vector3(0, 0, Mathf.Sign(-verticalMovement));
             }
+        }
+
+        if(FacingDirection.x < 0) // left
+        {
+            FacingDirectionParam = 0;
+        }
+        else if(FacingDirection.x > 0) // right
+        {
+            FacingDirectionParam = 1;
+        }
+        else if(FacingDirection.z < 0) // down
+        {
+            FacingDirectionParam = 2;
+        }
+        else if(FacingDirection.z > 0) // up
+        {
+            FacingDirectionParam = 3;
+        }
+        else // default
+        {
+            FacingDirectionParam = 2;
         }
 
         Vector3 destination = transform.position;
