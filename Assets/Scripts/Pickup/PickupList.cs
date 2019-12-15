@@ -23,7 +23,7 @@ public class PickupList : ScriptableObject
     {
         foreach (PickupForList p in pickups)
         {
-            if (pickup.partSet == p.partSet && pickup.partType == pickup.partType && p.partState == PartStateEnum.Fixed)
+            if (pickup.partSet == p.partSet && pickup.partType == p.partType && p.partState == PartStateEnum.Fixed)
             {
                 return p.sprite;
             }
