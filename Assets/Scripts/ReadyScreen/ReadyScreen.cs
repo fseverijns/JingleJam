@@ -21,7 +21,7 @@ public class ReadyScreen : MonoBehaviour
     void Start()
     {
         GameManager gameManager = GameManager.Instance;
-        gameManager.FreezeAllPlayers();
+        TimerManager.Instance.FreezeAllPlayers();
 
         if (gameManager.player1Joined)
         {
@@ -83,7 +83,8 @@ public class ReadyScreen : MonoBehaviour
 
         if (playersReady == playersNeeded)
         {
-            GameManager.Instance.StartGame();
+            TimerManager.Instance.StartGame();
+            gameObject.SetActive(false);
         }
     }
 }

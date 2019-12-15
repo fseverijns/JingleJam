@@ -61,9 +61,6 @@ MonoBehaviour:
       type: 3}
     partSet: 2
     partType: 3
-  - sprite: {fileID: 0}
-    partSet: 0
-    partType: 0
   - sprite: {fileID: -3707748591291926145, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
       type: 3}
     partSet: 3

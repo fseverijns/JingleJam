@@ -34,6 +34,7 @@ public class Wishlist : MonoBehaviour
     void Start()
     {
         SetWishlistParts(UnityEngine.Random.Range(1, 9));
+        SetActualSprite();
         SetWisheeText();
     }
 
@@ -42,6 +43,8 @@ public class Wishlist : MonoBehaviour
         if (headPart == headSet && bodyPart == bodySet && legsPart == legsSet && decorationPart == decorationSet)
         {
             SetWishlistParts(UnityEngine.Random.Range(1, 9));
+            SetActualSprite();
+            SetWisheeText();
             return true;
         }
         else

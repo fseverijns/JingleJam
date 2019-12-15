@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuControllerManager : PersistentSingleton<MenuControllerManager>
+public class MenuControllerManager : Singleton<MenuControllerManager>
 {
     bool mainMenu = true;
     int currentItem;
