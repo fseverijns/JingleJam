@@ -95,6 +95,10 @@ public class Player : Movable
                 FacingDirection = new Vector3(0, 0, Mathf.Sign(-verticalMovement));
             }
         }
+        else
+        {
+            FacingDirection = new Vector3(0, 0, -1);
+        }
 
         if(FacingDirection.x < 0) // left
         {
