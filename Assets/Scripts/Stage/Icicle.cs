@@ -10,6 +10,8 @@ public class Icicle : MonoBehaviour
     private KillPlayerOnTouch killOnTouch;
     [SerializeField]
     private PickupDestroyer pickupDestroyer;
+    [SerializeField]
+    private AudioSource icicleCrashSound;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class Icicle : MonoBehaviour
     public void CrashIcicle()
     {
         Debug.Log("Destroy things");
+        icicleCrashSound.Play();
         theCollider.isTrigger = false;
         Destroy(killOnTouch);
         Destroy(pickupDestroyer);
