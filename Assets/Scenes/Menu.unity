@@ -157,7 +157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuButtons:
   - {fileID: 1941295757}
-  - {fileID: 0}
   - {fileID: 1799605946}
   gameMenuButtons: []
 --- !u!4 &120078389
