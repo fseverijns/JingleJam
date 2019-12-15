@@ -113,10 +113,6 @@ public class Pickup : Movable
 
     public void TogglePrompt(bool state)
     {
-        if(state)
-        {
-            Debug.Log("Prompt");
-        }
         prompt.SetActive(state);
     }
 }
