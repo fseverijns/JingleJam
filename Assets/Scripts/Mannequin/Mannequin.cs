@@ -23,6 +23,11 @@ public class Mannequin : PickupInteracter
     [SerializeField]
     private GameObject decorationImage;
 
+    [SerializeField]
+    private AudioSource putOnMannequinSound;
+    [SerializeField]
+    private AudioSource mannequinCompleteSound;
+
     [Space]
     [SerializeField]
     private Wishlist wishlist;
@@ -93,6 +98,7 @@ public class Mannequin : PickupInteracter
             }
             if (correctPart)
             {
+                putOnMannequinSound.Play();
                 if (pickup.partState == PartStateEnum.Broken)
                 {
                     brokenParts++;
@@ -185,6 +191,7 @@ public class Mannequin : PickupInteracter
             bodyImage.SetActive(false);
             legsImage.SetActive(false);
             decorationImage.SetActive(false);
+            mannequinCompleteSound.Play();
 
             partsPlaced = 0;
 
