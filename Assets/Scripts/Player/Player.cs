@@ -27,6 +27,9 @@ public class Player : Movable
     [SerializeField]
     private float respawnDelay;
 
+    [SerializeField]
+    private AudioSource walkingSound;
+
     public bool PlayerFrozen { get; private set; }
 
     public Vector3 PickupHeldPosition { get => transform.position + pickupHeldPosition; }
@@ -37,6 +40,8 @@ public class Player : Movable
     public Vector3 FacingDirection;
     public int FacingDirectionParam;
     public bool PlayerIsMoving;
+
+    private bool walkingSoundIsPlaying = false;
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +92,7 @@ public class Player : Movable
 
         if(horizontalMovement != 0 || verticalMovement != 0)
         {
+            PlayWalkingSound();
             if (Mathf.Abs(horizontalMovement) > Mathf.Abs(verticalMovement))
             {
                 FacingDirection = new Vector3(Mathf.Sign(horizontalMovement), 0, 0);
@@ -99,6 +105,13 @@ public class Player : Movable
         }
         else
         {
+            if (walkingSound.isPlaying)
+            {
+                walkingSound.Stop();
+                StopCoroutine(WalkingSoundTimer());
+                walkingSoundIsPlaying = false;
+            }
+
             PlayerIsMoving = false;
             FacingDirection = new Vector3(0, 0, -1);
         }
@@ -133,6 +146,25 @@ public class Player : Movable
 
         Vector3 newPosition = Vector3.Lerp(transform.position, destination, Time.deltaTime);
         transform.position = newPosition;
+    }
+
+    private void PlayWalkingSound()
+    {
+        if (walkingSoundIsPlaying == false)
+        {
+            walkingSoundIsPlaying = true;
+            walkingSound.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
+            walkingSound.reverbZoneMix = UnityEngine.Random.Range(0.7f, 1.1f);
+            walkingSound.Play();
+
+            StartCoroutine(WalkingSoundTimer());
+        }
+    }
+
+    private IEnumerator WalkingSoundTimer()
+    {
+        yield return new WaitForSeconds(walkingSound.clip.length);
+        walkingSoundIsPlaying = false;
     }
 
     void UpdatePickups()
