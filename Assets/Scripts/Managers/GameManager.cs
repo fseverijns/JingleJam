@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class GameManager : PersistentSingleton<GameManager>
 {
@@ -13,6 +13,12 @@ public class GameManager : PersistentSingleton<GameManager>
 
     [SerializeField]
     private List<Player> players;
+
+    [SerializeField]
+    private float gameTime;
+    private bool timerPlaying = false;
+    [SerializeField]
+    private Text timerText;
 
     [SerializeField]
     private GameObject characterImage1;
@@ -117,7 +123,19 @@ public class GameManager : PersistentSingleton<GameManager>
             {
                 SceneManager.LoadScene(1);
             }
-        }       
+        }    
+        if (SceneManager.GetActiveScene().name == "Game")
+        {
+            if (timerPlaying)
+            {
+                gameTime -= Time.deltaTime;
+                timerText.text = "TIME LEFT: " + gameTime.ToString("F0");
+                if (gameTime < 0)
+                {
+                    ShowEndScreen();
+                }
+            }
+        }
     }
 
     public void ShowEndScreen()
@@ -173,5 +191,12 @@ public class GameManager : PersistentSingleton<GameManager>
     public void StartGame()
     {
         UnFreezeAllPlayers();
+        StartTimer();
+
+    }
+
+    public void StartTimer()
+    {
+        timerPlaying = true;
     }
 }
