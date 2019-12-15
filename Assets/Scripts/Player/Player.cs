@@ -46,6 +46,8 @@ public class Player : Movable
     [SerializeField]
     private GameObject respawnParticles;
 
+    private Animator anim;
+
     public bool PlayerFrozen { get; private set; }
 
     public Vector3 PickupHeldPosition { get => transform.position + pickupHeldPosition; }
@@ -62,7 +64,7 @@ public class Player : Movable
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame    
@@ -180,6 +182,12 @@ public class Player : Movable
 
         Vector3 newPosition = Vector3.Lerp(transform.position, destination, Time.deltaTime);
         transform.position = newPosition;
+
+        if(anim)
+        {
+            anim.SetBool("PlayerIsMoving", PlayerIsMoving);
+            anim.SetInteger("FacingDirectionParam", FacingDirectionParam);
+        }
     }
 
     private void PlayWalkingSound()
