@@ -12,4 +12,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd69a2625378c042822e21c433cbae7, type: 3}
   m_Name: WishlistOptions
   m_EditorClassIdentifier: 
-  wishtlistObjectOptions: []
+  wishtlistObjectOptions:
+  - sprite: {fileID: -8567327899227424522, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 0
+  - sprite: {fileID: 2251367813752894220, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 1
+  - sprite: {fileID: -4934077215184864200, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 2
+  - sprite: {fileID: -4531349955829603764, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 3
+  - sprite: {fileID: -7580330995457774586, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 0
+  - sprite: {fileID: -1858822337628587916, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 1
+  - sprite: {fileID: 4933821522283819044, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 2
+  - sprite: {fileID: -4987588603004433683, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 3
+  - sprite: {fileID: 2722460139225381206, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 0
+  - sprite: {fileID: -4899589551263586342, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 1
+  - sprite: {fileID: -8661985783378490052, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 2
+  - sprite: {fileID: -5811406104185645173, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 3
+  - sprite: {fileID: 0}
+    partSet: 0
+    partType: 0
+  - sprite: {fileID: -3707748591291926145, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
+      type: 3}
+    partSet: 3
+    partType: 0
+  - sprite: {fileID: 522438870408975304, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1, type: 3}
+    partSet: 3
+    partType: 1
+  - sprite: {fileID: 6309515378369134856, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
+      type: 3}
+    partSet: 3
+    partType: 2
+  - sprite: {fileID: -4876726925204741628, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
+      type: 3}
+    partSet: 3
+    partType: 3
