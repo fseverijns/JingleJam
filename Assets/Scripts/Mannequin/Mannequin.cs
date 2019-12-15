@@ -200,14 +200,18 @@ public class Mannequin : PickupInteracter
             {
                 isSetCompleted = true;
             }
+            Debug.Log("SetCount: " + setPartsCount);
+            Debug.Log("isSetComplete: " + isSetCompleted);
 
             bool wishlistCompleted = wishlist.CompleteWishlist(headSet, bodySet, legsSet, decorationSet);
+
 
             ScoreManager.Instance.IncreasePlayerScore(playerNumber, brokenParts, fixedParts, isSetCompleted, wishlistCompleted);
 
             isSetCompleted = false;
             brokenParts = 0;
             fixedParts = 0;
+            setPartsCount = 0;
 
             ScoreManager.Instance.AddFinishedToyToList(playerNumber, new FinishedToy(headImage.GetComponent<Image>(), bodyImage.GetComponent<Image>(), legsImage.GetComponent<Image>(), decorationImage.GetComponent<Image>()));
         }

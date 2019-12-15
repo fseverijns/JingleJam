@@ -16,6 +16,8 @@ public class TimerManager : Singleton<TimerManager>
     private Text timerText;
     [SerializeField]
     private AudioSource timerRunningOutSound;
+    [SerializeField]
+    private EndScreen endScreen;
 
     private void Update()
     {
@@ -29,7 +31,7 @@ public class TimerManager : Singleton<TimerManager>
                 {
                     timerRunningOutSound.Play();
                 }
-                if (gameTime < 0)
+                if (gameTime <= 0)
                 {
                     ShowEndScreen();
                 }
@@ -39,8 +41,8 @@ public class TimerManager : Singleton<TimerManager>
 
     public void ShowEndScreen()
     {
-        EndScreen endScreen = EndScreen.Instance;
         ScoreManager scoreManager = ScoreManager.Instance;
+        endScreen.gameObject.SetActive(true);
 
         int playerCount = 0;
         if (GameManager.Instance.player1Joined)

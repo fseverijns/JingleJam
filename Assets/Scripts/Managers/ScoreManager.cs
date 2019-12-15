@@ -37,16 +37,16 @@ public class ScoreManager : PersistentSingleton<ScoreManager>
             switch (playerNumber)
             {
                 case 1:
-                    player1Score += ((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart) * 3);
+                    player1Score += (((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart)) * 3);
                     break;
                 case 2:
-                    player2Score += ((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart) * 3);
+                    player2Score += (((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart)) * 3);
                     break;
                 case 3:
-                    player3Score += ((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart) * 3);
+                    player3Score += (((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart)) * 3);
                     break;
                 case 4:
-                    player4Score += ((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart) * 3);
+                    player4Score += (((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart)) * 3);
                     break;
             }
         }
@@ -55,16 +55,16 @@ public class ScoreManager : PersistentSingleton<ScoreManager>
             switch (playerNumber)
             {
                 case 1:
-                    player1Score += ((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart) * 2);
+                    player1Score += (((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart)) * 2);
                     break;
                 case 2:
-                    player2Score += ((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart) * 2);
+                    player2Score += (((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart)) * 2);
                     break;
                 case 3:
-                    player3Score += ((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart) * 2);
+                    player3Score += (((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart)) * 2);
                     break;
                 case 4:
-                    player4Score += ((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart) * 2);
+                    player4Score += (((brokenParts * brokenScorePerPart) + (fixedParts * fixedScorePerPart)) * 2);
                     break;
             }
         }

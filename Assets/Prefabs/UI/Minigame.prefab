@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1257545828833776370}
   - component: {fileID: 1403073861671054486}
   - component: {fileID: 4786375948169161709}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 8107802837651594016}
   - component: {fileID: 8107802837651594046}
   - component: {fileID: 8107802837651594017}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 8107802838320113684}
   - component: {fileID: 8107802838320113687}
   - component: {fileID: 8107802838320113686}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Minigame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 8107802838445826961}
   - component: {fileID: 8107802838445827052}
   - component: {fileID: 8107802838445827055}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SuccessArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
