@@ -34,6 +34,7 @@ public class Wishlist : MonoBehaviour
     void Start()
     {
         SetWishlistParts(UnityEngine.Random.Range(1, 9));
+        SetWisheeText();
     }
 
     public bool CompleteWishlist(PartSetEnum headSet, PartSetEnum bodySet, PartSetEnum legsSet, PartSetEnum decorationSet)
