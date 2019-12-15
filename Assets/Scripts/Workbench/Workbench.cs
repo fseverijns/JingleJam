@@ -15,8 +15,8 @@ public class Workbench : PickupInteracter
     [SerializeField]
     private float reactivationTime;
 
-    private bool inUse = false;
-    private bool recovering = false;
+    public bool inUse = false;
+    public bool recovering = false;
 
     public override void Interact(Player player)
     {
