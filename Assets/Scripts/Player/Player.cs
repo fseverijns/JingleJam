@@ -36,6 +36,7 @@ public class Player : Movable
 
     public Vector3 FacingDirection;
     public int FacingDirectionParam;
+    public bool PlayerIsMoving;
 
     // Start is called before the first frame update
     void Start()
@@ -94,9 +95,11 @@ public class Player : Movable
             {
                 FacingDirection = new Vector3(0, 0, Mathf.Sign(-verticalMovement));
             }
+            PlayerIsMoving = true;
         }
         else
         {
+            PlayerIsMoving = false;
             FacingDirection = new Vector3(0, 0, -1);
         }
 
