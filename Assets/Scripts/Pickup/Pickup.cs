@@ -29,7 +29,7 @@ public class Pickup : Movable
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(snapToPlayer && currentOwner != null)
         {

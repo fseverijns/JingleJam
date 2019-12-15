@@ -6,7 +6,7 @@ public class Movable : MonoBehaviour
 {
     public Vector3 Movement { get; set; }
 
-    private void Update()
+    private void FixedUpdate()
     {
         UpdateMovement();
     }
@@ -16,5 +16,7 @@ public class Movable : MonoBehaviour
         Vector3 destination = transform.position + Movement;
         Vector3 newPosition = Vector3.Lerp(transform.position, destination, Time.deltaTime);
         transform.position = newPosition;
+
+        Movement = Vector3.zero;
     }
 }

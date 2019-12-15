@@ -32,7 +32,7 @@ public class Conveyor : MonoBehaviour
         Movable movable = other.gameObject.GetComponent<Movable>();
         if (movable != null)
         {
-            movable.Movement = conveyorMovement;
+            movable.Movement += conveyorMovement;
         }
     }
 
@@ -41,7 +41,7 @@ public class Conveyor : MonoBehaviour
         Movable movable = other.gameObject.GetComponent<Movable>();
         if (movable != null)
         {
-            movable.Movement = Vector3.zero;
+            movable.Movement -= conveyorMovement;
         }
     }
 }
