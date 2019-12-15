@@ -112,6 +112,11 @@ public class GameManager : PersistentSingleton<GameManager>
                 player4JoinImage.SetActive(true);
                 player4JoinedImage.SetActive(false);
             }
+
+            if (Input.GetButtonDown("StartButton"))
+            {
+                SceneManager.LoadScene(1);
+            }
         }       
     }
 
