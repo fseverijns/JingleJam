@@ -47,15 +47,6 @@ public class Mannequin : PickupInteracter
             SpriteRenderer partSprite;
             bool correctPart = false;
 
-            if (pickup.partState == PartStateEnum.Broken)
-            {
-                brokenParts++;
-            }
-            if (pickup.partState == PartStateEnum.Fixed)
-            {
-                fixedParts++;
-            }
-
             switch (pickup.partType)
             {
                 case PartTypeEnum.head:
@@ -65,7 +56,7 @@ public class Mannequin : PickupInteracter
                         partSprite = headImage.GetComponent<SpriteRenderer>();
                         partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
                         headImage.SetActive(true);
-                        headSet = partSprite.GetComponent<Pickup>().partSet;
+                        headSet = pickup.partSet;
 
                     }
                     break;
@@ -76,7 +67,7 @@ public class Mannequin : PickupInteracter
                         partSprite = bodyImage.GetComponent<SpriteRenderer>();
                         partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
                         bodyImage.SetActive(true);
-                        bodySet = partSprite.GetComponent<Pickup>().partSet;
+                        bodySet = pickup.partSet;
                     }
                     break;
                 case PartTypeEnum.legs:
@@ -86,7 +77,7 @@ public class Mannequin : PickupInteracter
                         partSprite = legsImage.GetComponent<SpriteRenderer>();
                         partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
                         legsImage.SetActive(true);
-                        legsSet = partSprite.GetComponent<Pickup>().partSet;
+                        legsSet = pickup.partSet;
                     }
                     break;
                 case PartTypeEnum.decoration:
@@ -96,12 +87,21 @@ public class Mannequin : PickupInteracter
                         partSprite = decorationImage.GetComponent<SpriteRenderer>();
                         partSprite.sprite = pickup.GetComponentInChildren<SpriteRenderer>().sprite;
                         decorationImage.SetActive(true);
-                        decorationSet = partSprite.GetComponent<Pickup>().partSet;
+                        decorationSet = pickup.partSet;
                     }
                     break;
             }
             if (correctPart)
             {
+                if (pickup.partState == PartStateEnum.Broken)
+                {
+                    brokenParts++;
+                }
+                if (pickup.partState == PartStateEnum.Fixed)
+                {
+                    fixedParts++;
+                }
+
                 if (partsPlaced == 0)
                 {
                     currentSet = pickup.partSet;

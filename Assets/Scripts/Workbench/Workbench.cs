@@ -15,6 +15,9 @@ public class Workbench : PickupInteracter
     [SerializeField]
     private float reactivationTime;
 
+    [SerializeField]
+    private PickupList pickupList;
+
     private bool inUse = false;
     private bool recovering = false;
 
@@ -58,12 +61,14 @@ public class Workbench : PickupInteracter
         if(!success)
         {
             player.CarryingPickup.partState = PartStateEnum.Broken;
+            player.CarryingPickup.GetComponent<SpriteRenderer>().sprite = pickupList.GetBrokenVersion(player.CarryingPickup);
             recovering = true;
             Invoke("ReactivateWorkbench", reactivationTime);
         }
         else
         {
             player.CarryingPickup.partState = PartStateEnum.Fixed;
+            player.CarryingPickup.GetComponent<SpriteRenderer>().sprite = pickupList.GetFixedVersion(player.CarryingPickup);
         }
 
         inUse = false;

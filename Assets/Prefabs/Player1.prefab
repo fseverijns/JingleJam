@@ -175,6 +175,8 @@ MonoBehaviour:
   speed: 5
   pickupHeldPosition: {x: 0, y: 1, z: 0}
   pickupDropPosition: {x: 0, y: 0, z: 1}
+  spawnPoint: {fileID: 0}
+  respawnDelay: 2
 --- !u!54 &5610653825408198663
 Rigidbody:
   m_ObjectHideFlags: 0

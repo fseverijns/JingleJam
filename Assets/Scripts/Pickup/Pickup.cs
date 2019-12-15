@@ -14,6 +14,9 @@ public class Pickup : Movable
     public PartSetEnum partSet;
 
     [SerializeField]
+    private SpriteRenderer spriteRenderer;
+
+    [SerializeField]
     private GameObject prompt;
 
     public Vector3 ExternalMovement { get; set; }
