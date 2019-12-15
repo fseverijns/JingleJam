@@ -21,6 +21,8 @@ public class ReadyScreen : MonoBehaviour
     void Start()
     {
         GameManager gameManager = GameManager.Instance;
+        gameManager.FreezeAllPlayers();
+
         if (gameManager.player1Joined)
         {
             player1ReadyText.gameObject.SetActive(true);

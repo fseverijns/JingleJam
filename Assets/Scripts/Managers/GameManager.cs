@@ -12,6 +12,9 @@ public class GameManager : PersistentSingleton<GameManager>
     public bool player4Joined = false;
 
     [SerializeField]
+    private List<Player> players;
+
+    [SerializeField]
     private GameObject characterImage1;
     [SerializeField]
     private GameObject player1JoinImage;
@@ -144,10 +147,26 @@ public class GameManager : PersistentSingleton<GameManager>
         }
 
         endScreen.SetPlayersActive(playerCount);
+        FreezeAllPlayers();
     }
 
+    public void FreezeAllPlayers()
+    {
+        foreach (Player player in players)
+        {
+            player.FreezePlayer();
+        }  
+    }
+
+    public void UnFreezeAllPlayers()
+    {
+        foreach (Player player in players)
+        {
+            player.UnFreezePlayer();
+        }
+    }
     public void StartGame()
     {
-
+        UnFreezeAllPlayers();
     }
 }
