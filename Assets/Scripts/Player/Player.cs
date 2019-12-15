@@ -66,7 +66,7 @@ public class Player : Movable
     }
 
     // Update is called once per frame    
-    void Update()
+    void FixedUpdate()
     {
         UpdateMovement();
 
@@ -173,8 +173,8 @@ public class Player : Movable
 
         Vector3 destination = transform.position;
 
-        destination = transform.position + Vector3.right * (horizontalMovement * speed);
-        destination += Vector3.forward * -(verticalMovement * speed);
+        destination = transform.position + transform.right * (horizontalMovement * speed);
+        destination += transform.forward * -(verticalMovement * speed);
 
         destination += Movement;
 
