@@ -78,5 +78,8 @@ public class MenuControllerManager : PersistentSingleton<MenuControllerManager>
         mainMenuButtons[currentItem].Select();
     }
 
-
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
