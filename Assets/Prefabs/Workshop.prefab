@@ -9619,7 +9619,7 @@ Transform:
   m_GameObject: {fileID: 407216180613958345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 8324024483084968624}
   - {fileID: 1794599315653969215}
@@ -9707,10 +9707,10 @@ MonoBehaviour:
   prompt: {fileID: 6992265714101609107}
   minigames:
   - {fileID: 8107802838320113686, guid: 3d53caaf389b74a4980d2162a9f7b8f5, type: 3}
-  - {fileID: 8107802838320113686, guid: 3d53caaf389b74a4980d2162a9f7b8f5, type: 3}
-  - {fileID: 8107802838320113686, guid: 3d53caaf389b74a4980d2162a9f7b8f5, type: 3}
-  - {fileID: 8107802838320113686, guid: 3d53caaf389b74a4980d2162a9f7b8f5, type: 3}
-  - {fileID: 8107802838320113686, guid: 3d53caaf389b74a4980d2162a9f7b8f5, type: 3}
+  - {fileID: 8107802838320113686, guid: 960d66161111c0640befd23af5cb38b7, type: 3}
+  - {fileID: 8107802838320113686, guid: 6f466e43be04fb6468498803954a73dd, type: 3}
+  - {fileID: 8107802838320113686, guid: 1adffdbcf7837fb498dc80c30faa17cd, type: 3}
+  - {fileID: 8107802838320113686, guid: 96541cc83f6049f43adef2e4d6011486, type: 3}
   minigameContainer: {fileID: 0}
   pickupPosition: {fileID: 7775076158665589780}
   playerPosition: {fileID: 8218674917138484411}

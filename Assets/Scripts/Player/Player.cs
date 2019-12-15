@@ -67,14 +67,11 @@ public class Player : Movable
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame    
-    void FixedUpdate()
+    private void Update()
     {
-        UpdateMovement();
-
-        if(Input.GetButtonDown("Player" + playerNum + "Pickup"))
+        if (Input.GetButtonDown("Player" + playerNum + "Pickup"))
         {
-            if(CarryingPickup)
+            if (CarryingPickup)
             {
                 DropObject();
             }
@@ -83,9 +80,9 @@ public class Player : Movable
                 PickupObject();
             }
         }
-        if(Input.GetButtonDown("Player" + playerNum + "Interact"))
+        if (Input.GetButtonDown("Player" + playerNum + "Interact"))
         {
-            if(CarryingPickup)
+            if (CarryingPickup)
             {
                 Interact();
             }
@@ -108,6 +105,12 @@ public class Player : Movable
                 currentTauntCooldown = 0;
             }
         }
+    }
+
+    // Update is called once per frame    
+    void FixedUpdate()
+    {
+        UpdateMovement();
     }
 
     private void LateUpdate()
