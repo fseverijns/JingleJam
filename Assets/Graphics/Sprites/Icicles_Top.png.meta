@@ -1,0 +1,271 @@
+fileFormatVersion: 2
+guid: d3ac2462083c18948a350e9659b94cb2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3114672707101427695
+    second: Icicles_Top_0
+  - first:
+      213: 5132725327225970521
+    second: Icicles_Top_1
+  - first:
+      213: -5381081308985579707
+    second: Icicles_Top_2
+  - first:
+      213: 2403899976497484030
+    second: Icicles_Top_3
+  - first:
+      213: 5968054644106993987
+    second: Icicles_Top_4
+  - first:
+      213: -7390663318318937656
+    second: Icicles_Top_5
+  - first:
+      213: -763044514808948546
+    second: Icicles_Top_6
+  - first:
+      213: -2671112572785538715
+    second: Icicles_Top_7
+  - first:
+      213: -8730878834327640016
+    second: Icicles_Top_8
+  - first:
+      213: -2898784538529542649
+    second: Icicles_Top_9
+  - first:
+      213: 2651969745467210290
+    second: Icicles_Top_10
+  - first:
+      213: -1614215102624975389
+    second: Icicles_Top_11
+  - first:
+      213: 8227005188131604916
+    second: Icicles_Top_12
+  - first:
+      213: -5626730536583207590
+    second: Icicles_Top_13
+  - first:
+      213: 3602201164570798055
+    second: Icicles_Top_14
+  - first:
+      213: -1162397716707724393
+    second: Icicles_Top_15
+  - first:
+      213: -4138592171677689076
+    second: Icicles_Top_01
+  - first:
+      213: -8413902285551470119
+    second: Icicles_Top_02
+  - first:
+      213: -2678951857491721479
+    second: Icicles_Top_03
+  - first:
+      213: 7159914155090704201
+    second: Icicles_Top_04
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Icicles_Top_01
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 513
+        width: 387
+        height: 1472
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa0b3d51876ccf4a9ac5df78cf85aaf
+      internalID: -4138592171677689076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icicles_Top_02
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1079
+        width: 319
+        height: 905
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c74a157dca159e498512a266a19f312
+      internalID: -8413902285551470119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icicles_Top_03
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1514
+        width: 186
+        height: 468
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab6358976d20f44a9890190fd3cba12
+      internalID: -2678951857491721479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icicles_Top_04
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 770
+        width: 199
+        height: 1214
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4e0943fc5c43345ab846c9e0d5213a
+      internalID: 7159914155090704201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b360d4a71b92a1941afcde5e87b63b4f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
