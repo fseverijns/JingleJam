@@ -183,6 +183,10 @@ MonoBehaviour:
   walkingSound: {fileID: 630227501}
   pickupItemSound: {fileID: 614381440506741391}
   dropItemSound: {fileID: 2739916110779669326}
+  deathParticles: {fileID: 3214766687590006974, guid: db53d57c4db95a84581cbb3eeebd4250,
+    type: 3}
+  respawnParticles: {fileID: 3193920826553814543, guid: fb6c72468c2978849bde6da1ad8489e7,
+    type: 3}
   FacingDirection: {x: 0, y: 0, z: 0}
   FacingDirectionParam: 0
   PlayerIsMoving: 0

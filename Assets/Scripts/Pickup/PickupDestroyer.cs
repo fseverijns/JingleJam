@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PickupDestroyer : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject destroyPickupParticle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,10 @@ public class PickupDestroyer : MonoBehaviour
             if(pickup.PickedUpByPlayer)
             {
                 return;
+            }
+            if(destroyPickupParticle)
+            {
+                Instantiate(destroyPickupParticle, pickup.transform.position, Quaternion.identity);
             }
             Destroy(pickup.gameObject);
         }

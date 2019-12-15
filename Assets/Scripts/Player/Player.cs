@@ -33,6 +33,11 @@ public class Player : Movable
     private AudioSource pickupItemSound;
     [SerializeField]
     private AudioSource dropItemSound;
+    
+    [SerializeField]
+    private GameObject deathParticles;
+    [SerializeField]
+    private GameObject respawnParticles;
 
     public bool PlayerFrozen { get; private set; }
 
@@ -292,12 +297,16 @@ public class Player : Movable
         }
 
         pickupsInRange.Clear();
+
+        Instantiate(deathParticles, transform.position, Quaternion.identity);
+
         Invoke("Respawn", respawnDelay);
         gameObject.SetActive(false);
     }
 
     public void Respawn()
     {
+        Instantiate(respawnParticles, transform.position, Quaternion.identity);
         transform.position = spawnPoint.transform.position;
         gameObject.SetActive(true);
     }
