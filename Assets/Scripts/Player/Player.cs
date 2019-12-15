@@ -301,6 +301,7 @@ public class Player : Movable
         Instantiate(deathParticles, transform.position, Quaternion.identity);
 
         Invoke("Respawn", respawnDelay);
+        GameScreen.Instance.MakePlayerUITransparent(playerNum);
         gameObject.SetActive(false);
     }
 
@@ -308,6 +309,7 @@ public class Player : Movable
     {
         Instantiate(respawnParticles, transform.position, Quaternion.identity);
         transform.position = spawnPoint.transform.position;
+        GameScreen.Instance.MakePlayerUISolid(playerNum);
         gameObject.SetActive(true);
     }
 
