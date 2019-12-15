@@ -69,9 +69,14 @@ public class Pickup : Movable
     {
         PickedUpByPlayer = false;
         snapToPlayer = false;
-        sphereCollider.enabled = true;
         StopAllCoroutines();
         StartCoroutine(MoveToDropPosition());
+        Invoke("ReEnableTrigger", 1.0f);
+    }
+
+    private void ReEnableTrigger()
+    {
+        sphereCollider.enabled = true;
     }
 
     private IEnumerator MoveToPlayer()

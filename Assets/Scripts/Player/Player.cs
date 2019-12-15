@@ -159,8 +159,10 @@ public class Player : Movable
     {
         if (closestPickup != null)
         {
+            pickupsInRange.Remove(closestPickup);
             CarryingPickup = closestPickup;
-            closestPickup.PickUp(this);
+            CarryingPickup.PickUp(this);
+            closestPickup = null;
         }         
     }
 
