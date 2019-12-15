@@ -1311,6 +1311,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Incinerator
       objectReference: {fileID: 0}
+    - target: {fileID: 7219903567031478576, guid: ffec9e32d6214214e836894b1cb38b2f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8022785086978298798, guid: ffec9e32d6214214e836894b1cb38b2f,
         type: 3}
       propertyPath: m_LocalPosition.x
