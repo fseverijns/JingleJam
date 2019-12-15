@@ -12,4 +12,161 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd6337cb7abe444d8042b6c6174066c, type: 3}
   m_Name: PickupsList
   m_EditorClassIdentifier: 
-  pickups: []
+  pickups:
+  - sprite: {fileID: -8567327899227424522, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 0
+    partState: 1
+  - sprite: {fileID: 5262441835024339420, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 0
+    partState: 2
+  - sprite: {fileID: 2251367813752894220, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 1
+    partState: 1
+  - sprite: {fileID: 1816289619937804386, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 1
+    partState: 2
+  - sprite: {fileID: -4934077215184864200, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 2
+    partState: 1
+  - sprite: {fileID: -3015117615292729477, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 2
+    partState: 2
+  - sprite: {fileID: -4531349955829603764, guid: 50958bb50b9bf6840ab10d44ad9709d9,
+      type: 3}
+    partSet: 0
+    partType: 3
+    partState: 1
+  - sprite: {fileID: 373640999119334568, guid: 50958bb50b9bf6840ab10d44ad9709d9, type: 3}
+    partSet: 0
+    partType: 3
+    partState: 2
+  - sprite: {fileID: -1858822337628587916, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 1
+    partState: 1
+  - sprite: {fileID: -7738195936716564063, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 1
+    partState: 2
+  - sprite: {fileID: 4933821522283819044, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 2
+    partState: 1
+  - sprite: {fileID: 2262207783786158915, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 2
+    partState: 2
+  - sprite: {fileID: -7580330995457774586, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 0
+    partState: 1
+  - sprite: {fileID: 6046472604478583365, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 0
+    partState: 2
+  - sprite: {fileID: -4987588603004433683, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 3
+    partState: 1
+  - sprite: {fileID: 6953329050189589846, guid: 05d7ff80586e2e544a05a6e3b0a54057,
+      type: 3}
+    partSet: 1
+    partType: 3
+    partState: 2
+  - sprite: {fileID: 2722460139225381206, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 0
+    partState: 1
+  - sprite: {fileID: -2386792136075458752, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 0
+    partState: 2
+  - sprite: {fileID: -4899589551263586342, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 1
+    partState: 1
+  - sprite: {fileID: -5527737133958108840, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 1
+    partState: 2
+  - sprite: {fileID: -8661985783378490052, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 2
+    partState: 1
+  - sprite: {fileID: 2007001015673365138, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 2
+    partState: 2
+  - sprite: {fileID: -5811406104185645173, guid: cca9f3100bec8324d9dbfaff46b074e3,
+      type: 3}
+    partSet: 2
+    partType: 3
+    partState: 1
+  - sprite: {fileID: 381333147062456325, guid: cca9f3100bec8324d9dbfaff46b074e3, type: 3}
+    partSet: 2
+    partType: 3
+    partState: 2
+  - sprite: {fileID: -3707748591291926145, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
+      type: 3}
+    partSet: 3
+    partType: 0
+    partState: 1
+  - sprite: {fileID: -7401593252648775570, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
+      type: 3}
+    partSet: 3
+    partType: 0
+    partState: 2
+  - sprite: {fileID: 522438870408975304, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1, type: 3}
+    partSet: 3
+    partType: 1
+    partState: 1
+  - sprite: {fileID: -8792546755379970549, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
+      type: 3}
+    partSet: 3
+    partType: 1
+    partState: 2
+  - sprite: {fileID: 6309515378369134856, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
+      type: 3}
+    partSet: 3
+    partType: 2
+    partState: 1
+  - sprite: {fileID: -6015464923024352540, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
+      type: 3}
+    partSet: 3
+    partType: 2
+    partState: 2
+  - sprite: {fileID: -4876726925204741628, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
+      type: 3}
+    partSet: 3
+    partType: 3
+    partState: 1
+  - sprite: {fileID: 3126452789792658407, guid: 73e87f0d62ca3ee4a8b2ab21b9eabde1,
+      type: 3}
+    partSet: 3
+    partType: 3
+    partState: 2

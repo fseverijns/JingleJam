@@ -145,4 +145,9 @@ public class GameManager : PersistentSingleton<GameManager>
 
         endScreen.SetPlayersActive(playerCount);
     }
+
+    public void StartGame()
+    {
+
+    }
 }
