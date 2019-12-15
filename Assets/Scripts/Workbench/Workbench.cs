@@ -50,6 +50,7 @@ public class Workbench : PickupInteracter
             int randomMinigameIndex = Random.Range(0, minigames.Count);
             MinigameController minigame = minigames[randomMinigameIndex];
             MinigameController instantiatedMinigame = Instantiate(minigame, minigameContainer);
+            Debug.Log(minigameContainer, minigameContainer.gameObject);
             instantiatedMinigame.StartMinigame(player, this);
         }
     }
@@ -61,14 +62,14 @@ public class Workbench : PickupInteracter
         if(!success)
         {
             player.CarryingPickup.partState = PartStateEnum.Broken;
-            player.CarryingPickup.GetComponent<SpriteRenderer>().sprite = pickupList.GetBrokenVersion(player.CarryingPickup);
+            player.CarryingPickup.spriteRenderer.sprite = pickupList.GetBrokenVersion(player.CarryingPickup);
             recovering = true;
             Invoke("ReactivateWorkbench", reactivationTime);
         }
         else
         {
             player.CarryingPickup.partState = PartStateEnum.Fixed;
-            player.CarryingPickup.GetComponent<SpriteRenderer>().sprite = pickupList.GetFixedVersion(player.CarryingPickup);
+            player.CarryingPickup.spriteRenderer.sprite = pickupList.GetFixedVersion(player.CarryingPickup);
         }
 
         inUse = false;

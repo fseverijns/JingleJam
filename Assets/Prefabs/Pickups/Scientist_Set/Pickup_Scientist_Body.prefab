@@ -145,6 +145,7 @@ MonoBehaviour:
   partType: 1
   partState: 0
   partSet: 2
+  spriteRenderer: {fileID: 2621030025942053864}
   prompt: {fileID: 2439655777694730176}
 --- !u!54 &2621030023897208499
 Rigidbody:

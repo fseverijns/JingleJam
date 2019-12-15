@@ -13,8 +13,7 @@ public class Pickup : Movable
     public PartStateEnum partState;
     public PartSetEnum partSet;
 
-    [SerializeField]
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     [SerializeField]
     private GameObject prompt;
