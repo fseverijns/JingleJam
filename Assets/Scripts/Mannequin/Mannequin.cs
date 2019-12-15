@@ -201,6 +201,8 @@ public class Mannequin : PickupInteracter
             isSetCompleted = false;
             brokenParts = 0;
             fixedParts = 0;
+
+            ScoreManager.Instance.AddFinishedToyToList(playerNumber, new FinishedToy(headImage.GetComponent<Image>(), bodyImage.GetComponent<Image>(), legsImage.GetComponent<Image>(), decorationImage.GetComponent<Image>()));
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class GameManager : PersistentSingleton<GameManager>
@@ -41,70 +42,107 @@ public class GameManager : PersistentSingleton<GameManager>
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Player1Pickup"))
+        if (SceneManager.GetActiveScene().name == "Menu")
         {
-            player1Joined = true;
+            if (Input.GetButtonDown("Player1Pickup"))
+            {
+                player1Joined = true;
 
-            characterImage1.SetActive(true);
-            player1JoinImage.SetActive(false);
-            player1JoinedImage.SetActive(true);
-        }
-        if (Input.GetButtonDown("Player2Pickup"))
+                characterImage1.SetActive(true);
+                player1JoinImage.SetActive(false);
+                player1JoinedImage.SetActive(true);
+            }
+            if (Input.GetButtonDown("Player2Pickup"))
+            {
+                player2Joined = true;
+
+                characterImage2.SetActive(true);
+                player2JoinImage.SetActive(false);
+                player2JoinedImage.SetActive(true);
+            }
+            if (Input.GetButtonDown("Player3Pickup"))
+            {
+                player3Joined = true;
+
+                characterImage3.SetActive(true);
+                player3JoinImage.SetActive(false);
+                player3JoinedImage.SetActive(true);
+            }
+            if (Input.GetButtonDown("Player4Pickup"))
+            {
+                player4Joined = true;
+
+                characterImage4.SetActive(true);
+                player4JoinImage.SetActive(false);
+                player4JoinedImage.SetActive(true);
+            }
+
+            if (Input.GetButtonDown("Player1Back"))
+            {
+                player1Joined = false;
+
+                characterImage1.SetActive(false);
+                player1JoinImage.SetActive(true);
+                player1JoinedImage.SetActive(false);
+            }
+            if (Input.GetButtonDown("Player2Back"))
+            {
+                player2Joined = false;
+
+                characterImage2.SetActive(false);
+                player2JoinImage.SetActive(true);
+                player2JoinedImage.SetActive(false);
+            }
+            if (Input.GetButtonDown("Player3Back"))
+            {
+                player3Joined = false;
+
+                characterImage3.SetActive(false);
+                player3JoinImage.SetActive(true);
+                player3JoinedImage.SetActive(false);
+            }
+            if (Input.GetButtonDown("Player4Back"))
+            {
+                player4Joined = false;
+
+                characterImage4.SetActive(false);
+                player4JoinImage.SetActive(true);
+                player4JoinedImage.SetActive(false);
+            }
+        }       
+    }
+
+    public void ShowEndScreen()
+    {
+        EndScreen endScreen = EndScreen.Instance;
+        ScoreManager scoreManager = ScoreManager.Instance;
+
+        int playerCount = 0;
+        if (player1Joined)
         {
-            player2Joined = true;
-
-            characterImage2.SetActive(true);
-            player2JoinImage.SetActive(false);
-            player2JoinedImage.SetActive(true);
+            playerCount++;
+            endScreen.FillFinishedToys(1, scoreManager.player1Toys);
+            endScreen.SetScore(1, scoreManager.player1Score);
         }
-        if (Input.GetButtonDown("Player3Pickup"))
+        if (player2Joined)
         {
-            player3Joined = true;
-
-            characterImage3.SetActive(true);
-            player3JoinImage.SetActive(false);
-            player3JoinedImage.SetActive(true);
+            playerCount++;
+            endScreen.FillFinishedToys(2, scoreManager.player2Toys);
+            endScreen.SetScore(2, scoreManager.player2Score);
         }
-        if (Input.GetButtonDown("Player4Pickup"))
+        if (player3Joined)
         {
-            player4Joined = true;
-
-            characterImage4.SetActive(true);
-            player4JoinImage.SetActive(false);
-            player4JoinedImage.SetActive(true);
+            playerCount++;
+            endScreen.FillFinishedToys(3, scoreManager.player3Toys);
+            endScreen.SetScore(3, scoreManager.player3Score);
         }
-
-        if (Input.GetButtonDown("Player1Back"))
+        if (player4Joined)
         {
-            player1Joined = false;
-
-            characterImage1.SetActive(false);
-            player1JoinImage.SetActive(true);
-            player1JoinedImage.SetActive(false);
+            playerCount++;
+            endScreen.FillFinishedToys(4, scoreManager.player4Toys);
+            endScreen.SetScore(4, scoreManager.player4Score);
         }
-        if (Input.GetButtonDown("Player2Back"))
-        {
-            player2Joined = false;
 
-            characterImage2.SetActive(false);
-            player2JoinImage.SetActive(true);
-            player2JoinedImage.SetActive(false);
-        }
-        if (Input.GetButtonDown("Player3Back"))
-        {
-            player3Joined = false;
-
-            characterImage3.SetActive(false);
-            player3JoinImage.SetActive(true);
-            player3JoinedImage.SetActive(false);
-        }
-        if (Input.GetButtonDown("Player4Back"))
-        {
-            player4Joined = false;
-
-            characterImage4.SetActive(false);
-            player4JoinImage.SetActive(true);
-            player4JoinedImage.SetActive(false);
-        }
+        endScreen.SetPlayersActive(playerCount);
     }
 }
