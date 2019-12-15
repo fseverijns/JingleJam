@@ -33,6 +33,13 @@ public class Player : Movable
     private AudioSource pickupItemSound;
     [SerializeField]
     private AudioSource dropItemSound;
+
+    [SerializeField]
+    private List<AudioSource> taunts;
+    [SerializeField]
+    private float tauntCooldown = 3f;
+    private float currentTauntCooldown = 0f;
+    private bool tauntOnCooldown = false;
     
     [SerializeField]
     private GameObject deathParticles;
@@ -79,6 +86,24 @@ public class Player : Movable
             if(CarryingPickup)
             {
                 Interact();
+            }
+        }
+
+        if(Input.GetButtonDown("Player" + playerNum + "Taunt"))
+        {
+            Taunt();
+        }
+
+        if (tauntOnCooldown)
+        {
+            if (currentTauntCooldown < tauntCooldown)
+            {
+                currentTauntCooldown += Time.deltaTime;
+            }
+            else
+            {
+                tauntOnCooldown = false;
+                currentTauntCooldown = 0;
             }
         }
     }
@@ -278,6 +303,17 @@ public class Player : Movable
     public void UnFreezePlayer()
     {
         PlayerFrozen = false;
+    }
+
+    private void Taunt()
+    {
+        if (tauntOnCooldown == false)
+        {
+            int audioSourceToPlay = Random.Range(0, taunts.Count);
+            taunts[audioSourceToPlay].Play();
+
+            tauntOnCooldown = true;
+        }
     }
 
     public void Kill()

@@ -19,6 +19,8 @@ public class GameManager : PersistentSingleton<GameManager>
     private bool timerPlaying = false;
     [SerializeField]
     private Text timerText;
+    [SerializeField]
+    private AudioSource timerRunningOutSound;
 
     [SerializeField]
     private GameObject characterImage1;
@@ -130,6 +132,10 @@ public class GameManager : PersistentSingleton<GameManager>
             {
                 gameTime -= Time.deltaTime;
                 timerText.text = "TIME LEFT: " + gameTime.ToString("F0");
+                if (gameTime <= 20 && gameTime > 0)
+                {
+                    timerRunningOutSound.Play();
+                }
                 if (gameTime < 0)
                 {
                     ShowEndScreen();
