@@ -9714,7 +9714,7 @@ MonoBehaviour:
   minigameContainer: {fileID: 0}
   pickupPosition: {fileID: 7775076158665589780}
   playerPosition: {fileID: 8218674917138484411}
-  reactivationTime: 5
+  reactivationTime: 30
   putItemInWorkbenchSound: {fileID: 1555744141293173550}
   workbenchSuccessSound: {fileID: 1229531986382326916}
   workbenchFailSound1: {fileID: 7286437122943860147}

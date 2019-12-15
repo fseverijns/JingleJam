@@ -47,8 +47,6 @@ public class Player : Movable
 
     private bool walkingSoundIsPlaying = false;
 
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -75,7 +73,7 @@ public class Player : Movable
         {
             if(CarryingPickup)
             {
-                PlaceObjectOnInteracter();
+                Interact();
             }
         }
     }
@@ -224,6 +222,11 @@ public class Player : Movable
 
     void PickupObject()
     {
+        if(PlayerFrozen)
+        {
+            return;
+        }
+
         if (closestPickup != null)
         {
             pickupItemSound.Play();
@@ -234,8 +237,13 @@ public class Player : Movable
         }         
     }
 
-    void PlaceObjectOnInteracter()
+    void Interact()
     {
+        if (PlayerFrozen)
+        {
+            return;
+        }
+
         if (interactorInRange != null)
         {
             interactorInRange.Interact(this);
@@ -244,7 +252,12 @@ public class Player : Movable
 
     void DropObject()
     {
-        if(CarryingPickup)
+        if (PlayerFrozen)
+        {
+            return;
+        }
+
+        if (CarryingPickup)
         {
             dropItemSound.Play();
             CarryingPickup.Drop();
