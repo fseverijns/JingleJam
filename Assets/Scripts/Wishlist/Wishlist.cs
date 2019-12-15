@@ -56,7 +56,7 @@ public class Wishlist : MonoBehaviour
     private void SetWisheeText()
     {
         int maxNumber = wisheeOptions.wisheeNames.Count;
-        wisheeText.text = wisheeOptions.wisheeNames[UnityEngine.Random.Range(0, maxNumber)] + ", wishes:";
+        wisheeText.text = wisheeOptions.wisheeNames[UnityEngine.Random.Range(0, maxNumber)] + ", WISHES:";
     }
 
     private void SetWishlistParts(int setNumber)
