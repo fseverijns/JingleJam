@@ -381,8 +381,20 @@ public class Player : Movable
 
         if (other.gameObject.tag.Equals("Interactable"))
         {
+            Debug.Log("Interactable in Range");
             PickupInteracter interactor = other.GetComponent<PickupInteracter>();
-            if(interactor != null)
+            if(interactor.gameObject.GetComponent<Mannequin>() != null)
+            {
+                if(interactor.gameObject.GetComponent<Mannequin>().playerNumber == playerNum)
+                {
+                    interactorInRange = interactor;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else if(interactor != null)
             {
                 interactorInRange = interactor;
             }

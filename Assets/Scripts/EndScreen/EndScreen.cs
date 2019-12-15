@@ -65,19 +65,36 @@ public class EndScreen : Singleton<EndScreen>
     {
         if (playernumber == 1 && Player1FinishedToysUI.activeInHierarchy)
         {
-            GameObject toy = Instantiate(FinishedToyPrefab, Player1FinishedToysUI.transform);
+            foreach (FinishedToy finishedToy in finishedToys)
+            {
+                GameObject toy = Instantiate(FinishedToyPrefab, Player1FinishedToysUI.transform);
+                toy.GetComponent<FinishedToy>().SetToyImages(finishedToy.headImage.sprite, finishedToy.bodyImage.sprite, finishedToy.legsImage.sprite, finishedToy.decorationImage.sprite);
+            }
+            
         }
         if (playernumber == 2 && Player2FinishedToysUI.activeInHierarchy)
         {
-            GameObject toy = Instantiate(FinishedToyPrefab, Player2FinishedToysUI.transform);
+            foreach (FinishedToy finishedToy in finishedToys)
+            {
+                GameObject toy = Instantiate(FinishedToyPrefab, Player2FinishedToysUI.transform);
+                toy.GetComponent<FinishedToy>().SetToyImages(finishedToy.headImage.sprite, finishedToy.bodyImage.sprite, finishedToy.legsImage.sprite, finishedToy.decorationImage.sprite);
+            }
         }
         if (playernumber == 3 && Player3FinishedToysUI.activeInHierarchy)
         {
-            GameObject toy = Instantiate(FinishedToyPrefab, Player3FinishedToysUI.transform);
+            foreach (FinishedToy finishedToy in finishedToys)
+            {
+                GameObject toy = Instantiate(FinishedToyPrefab, Player3FinishedToysUI.transform);
+                toy.GetComponent<FinishedToy>().SetToyImages(finishedToy.headImage.sprite, finishedToy.bodyImage.sprite, finishedToy.legsImage.sprite, finishedToy.decorationImage.sprite);
+            }
         }
         if (playernumber == 4 && Player4FinishedToysUI.activeInHierarchy)
         {
-            GameObject toy = Instantiate(FinishedToyPrefab, Player4FinishedToysUI.transform);
+            foreach (FinishedToy finishedToy in finishedToys)
+            {
+                GameObject toy = Instantiate(FinishedToyPrefab, Player4FinishedToysUI.transform);
+                toy.GetComponent<FinishedToy>().SetToyImages(finishedToy.headImage.sprite, finishedToy.bodyImage.sprite, finishedToy.legsImage.sprite, finishedToy.decorationImage.sprite);
+            }
         }
     }
 

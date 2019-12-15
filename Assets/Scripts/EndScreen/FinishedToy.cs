@@ -6,32 +6,20 @@ using UnityEngine.UI;
 public class FinishedToy : MonoBehaviour
 {
     [SerializeField]
-    private Image headImage;
+    public Image headImage;
     [SerializeField]
-    private Image bodyImage;
+    public Image bodyImage;
     [SerializeField]
-    private Image legsImage;
+    public Image legsImage;
     [SerializeField]
-    private Image decorationImage;
+    public Image decorationImage;
 
-    public FinishedToy (Image head, Image body, Image legs, Image decoration)
+    public void SetToyImages(Sprite head, Sprite body, Sprite legs, Sprite decoration)
     {
-        this.headImage = head;
-        this.bodyImage = body;
-        this.legsImage = legs;
-        this.decorationImage = decoration;
+        this.headImage.sprite = head;
+        this.bodyImage.sprite = body;
+        this.legsImage.sprite = legs;
+        this.decorationImage.sprite = decoration;
     }
 
-    public void SetToyImages(Image head, Image body, Image legs, Image decoration)
-    {
-        this.headImage = head;
-        this.bodyImage = body;
-        this.legsImage = legs;
-        this.decorationImage = decoration;
-    }
-
-    public FinishedToy CreateFinishedToy(Image head, Image body, Image legs, Image decoration)
-    {
-        return new FinishedToy(head, body, legs, decoration);
-    }
 }

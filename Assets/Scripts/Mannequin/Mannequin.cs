@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Mannequin : PickupInteracter
 {
     [SerializeField]
-    private int playerNumber;
+    public int playerNumber;
 
     private PartSetEnum currentSet;
     private int setPartsCount;
@@ -31,6 +31,11 @@ public class Mannequin : PickupInteracter
     [Space]
     [SerializeField]
     private Wishlist wishlist;
+
+    [SerializeField]
+    private GameObject finishedToyPrefab;
+    [SerializeField]
+    private GameObject finishedToyParent;
 
     private PartSetEnum headSet;
     private PartSetEnum bodySet;
@@ -187,10 +192,6 @@ public class Mannequin : PickupInteracter
     {
         if (partsPlaced == 4)
         {
-            headImage.SetActive(false);
-            bodyImage.SetActive(false);
-            legsImage.SetActive(false);
-            decorationImage.SetActive(false);
             mannequinCompleteSound.Play();
 
             partsPlaced = 0;
@@ -200,8 +201,6 @@ public class Mannequin : PickupInteracter
             {
                 isSetCompleted = true;
             }
-            Debug.Log("SetCount: " + setPartsCount);
-            Debug.Log("isSetComplete: " + isSetCompleted);
 
             bool wishlistCompleted = wishlist.CompleteWishlist(headSet, bodySet, legsSet, decorationSet);
 
@@ -213,7 +212,13 @@ public class Mannequin : PickupInteracter
             fixedParts = 0;
             setPartsCount = 0;
 
-            ScoreManager.Instance.AddFinishedToyToList(playerNumber, new FinishedToy(headImage.GetComponent<Image>(), bodyImage.GetComponent<Image>(), legsImage.GetComponent<Image>(), decorationImage.GetComponent<Image>()));
+            GameObject newToy = Instantiate(finishedToyPrefab, finishedToyParent.transform);
+            newToy.GetComponent<FinishedToy>().SetToyImages(headImage.GetComponent<SpriteRenderer>().sprite, bodyImage.GetComponent<SpriteRenderer>().sprite, legsImage.GetComponent<SpriteRenderer>().sprite, decorationImage.GetComponent<SpriteRenderer>().sprite);
+            ScoreManager.Instance.AddFinishedToyToList(playerNumber, newToy.GetComponent<FinishedToy>());
+            headImage.SetActive(false);
+            bodyImage.SetActive(false);
+            legsImage.SetActive(false);
+            decorationImage.SetActive(false);
         }
     }
 }

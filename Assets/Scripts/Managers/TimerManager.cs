@@ -19,6 +19,8 @@ public class TimerManager : Singleton<TimerManager>
     [SerializeField]
     private EndScreen endScreen;
 
+    bool showScreenOnce = false;
+
     private void Update()
     {
         if (SceneManager.GetActiveScene().name == "Game")
@@ -41,37 +43,44 @@ public class TimerManager : Singleton<TimerManager>
 
     public void ShowEndScreen()
     {
-        ScoreManager scoreManager = ScoreManager.Instance;
-        endScreen.gameObject.SetActive(true);
+        if (!showScreenOnce)
+        {
+            showScreenOnce = true;
+            timerPlaying = false;
+            GameScreen.Instance.gameObject.SetActive(false);
+            ScoreManager scoreManager = ScoreManager.Instance;
+            endScreen.gameObject.SetActive(true);
 
-        int playerCount = 0;
-        if (GameManager.Instance.player1Joined)
-        {
-            playerCount++;
-            endScreen.FillFinishedToys(1, scoreManager.player1Toys);
-            endScreen.SetScore(1, scoreManager.player1Score);
-        }
-        if (GameManager.Instance.player2Joined)
-        {
-            playerCount++;
-            endScreen.FillFinishedToys(2, scoreManager.player2Toys);
-            endScreen.SetScore(2, scoreManager.player2Score);
-        }
-        if (GameManager.Instance.player3Joined)
-        {
-            playerCount++;
-            endScreen.FillFinishedToys(3, scoreManager.player3Toys);
-            endScreen.SetScore(3, scoreManager.player3Score);
-        }
-        if (GameManager.Instance.player4Joined)
-        {
-            playerCount++;
-            endScreen.FillFinishedToys(4, scoreManager.player4Toys);
-            endScreen.SetScore(4, scoreManager.player4Score);
-        }
+            int playerCount = 0;
+            if (GameManager.Instance.player1Joined)
+            {
+                playerCount++;
+                endScreen.FillFinishedToys(1, scoreManager.player1Toys);
+                endScreen.SetScore(1, scoreManager.player1Score);
+            }
+            if (GameManager.Instance.player2Joined)
+            {
+                playerCount++;
+                endScreen.FillFinishedToys(2, scoreManager.player2Toys);
+                endScreen.SetScore(2, scoreManager.player2Score);
+            }
+            if (GameManager.Instance.player3Joined)
+            {
+                playerCount++;
+                endScreen.FillFinishedToys(3, scoreManager.player3Toys);
+                endScreen.SetScore(3, scoreManager.player3Score);
+            }
+            if (GameManager.Instance.player4Joined)
+            {
+                playerCount++;
+                endScreen.FillFinishedToys(4, scoreManager.player4Toys);
+                endScreen.SetScore(4, scoreManager.player4Score);
+            }
 
-        endScreen.SetPlayersActive(playerCount);
-        FreezeAllPlayers();
+            endScreen.SetPlayersActive(playerCount);
+            FreezeAllPlayers();
+        }
+        
     }
     public void FreezeAllPlayers()
     {
@@ -97,15 +106,15 @@ public class TimerManager : Singleton<TimerManager>
         {
             players[0].gameObject.SetActive(true);
         }
-        else if (GameManager.Instance.player2Joined)
+        if (GameManager.Instance.player2Joined)
         {
             players[1].gameObject.SetActive(true);
         }
-        else if (GameManager.Instance.player3Joined)
+        if (GameManager.Instance.player3Joined)
         {
             players[2].gameObject.SetActive(true);
         }
-        else if (GameManager.Instance.player4Joined)
+        if (GameManager.Instance.player4Joined)
         {
             players[3].gameObject.SetActive(true);
         }
