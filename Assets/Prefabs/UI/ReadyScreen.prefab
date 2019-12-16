@@ -330,11 +330,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8733753082926064609}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -132.92505, y: -60.648804}
+  m_AnchoredPosition: {x: -125.45011, y: -214.00003}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4442309272534234299
@@ -480,11 +480,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8733753082926064609}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -238.475, y: -60.548798}
+  m_AnchoredPosition: {x: -231.00008, y: -213.90002}
   m_SizeDelta: {x: 86.1, y: 108.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1314121198423223577
@@ -554,11 +554,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8733753082926064609}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.475006, y: -65.5488}
+  m_AnchoredPosition: {x: -2.0000706, y: -218.90002}
   m_SizeDelta: {x: 146.9, y: 163.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &420944764174067332
@@ -631,11 +631,11 @@ RectTransform:
   - {fileID: 7014189869626762162}
   - {fileID: 4135556306884901170}
   m_Father: {fileID: 8733753082926064609}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.475006, y: -226.6488}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &190580393914364125
@@ -707,11 +707,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8733753082926064609}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.774975, y: -173.94879}
+  m_AnchoredPosition: {x: -25, y: -356}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9163754127070421444
@@ -780,11 +780,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8733753082926064609}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.624964, y: -175.5488}
+  m_AnchoredPosition: {x: 3, y: -356}
   m_SizeDelta: {x: 213.67, y: 38.795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5667845839725788297
@@ -934,12 +934,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8733753082926064609}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.575037, y: 134.55116}
-  m_SizeDelta: {x: 758, y: 264.1}
+  m_AnchoredPosition: {x: 3, y: 152.29999}
+  m_SizeDelta: {x: 1806.5, y: 578.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2567399388168047146
 CanvasRenderer:
@@ -980,96 +980,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'CHRISTMAS IS ABOUT GIVING!
-
-    MAKE AND GIVE TOYS TO THE MEMBERS OF THE YOGSCAST!
-
-
-    GRAB TOY PARTS AND FIX THEM AT A WORKBENCH, THEN ATTACH THE PARTS TO YOUR MANNEQUIN.
-
-
-    A MANNEQUIN CAN ONLY HAVE ONE OF EACH PART ATTACHED AT A TIME.
-
-
-    YOU CAN MIX PARTS OF ANY SET, BUT COMPLETING A SET WILL EARN YOU MORE POINTS!
-
-
-    COMPLETING THE SET ON YOUR WISHLIST WILL EARN YOU AN ADDITIONAL BONUS!
-
-'
---- !u!1 &5519480444982263896
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5260850036963905400}
-  - component: {fileID: 4636716507790558603}
-  - component: {fileID: 2921476602402230107}
-  m_Layer: 5
-  m_Name: Image (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5260850036963905400
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5519480444982263896}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8733753082926064609}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.6, y: 22}
-  m_SizeDelta: {x: 951.9, y: 649.1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4636716507790558603
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5519480444982263896}
-  m_CullTransparentMesh: 0
---- !u!114 &2921476602402230107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5519480444982263896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.89019614, g: 0.19215688, b: 0.38431376, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a463d6530c748264e9bae5de2f55c095, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_Text: "CHRISTMAS IS ABOUT GIVING!\nMAKE AND GIVE TOYS TO THE MEMBERS OF THE YOGSCAST!\n\n\nGRAB
+    TOY PARTS AND FIX THEM AT A WORKBENCH, \nTHEN ATTACH THE PARTS TO YOUR MANNEQUIN.\n\n\nA
+    MANNEQUIN CAN ONLY HAVE ONE OF EACH PART ATTACHED AT A TIME.\n\n\nYOU CAN MIX
+    PARTS OF ANY SET, \nBUT COMPLETING A SET WILL EARN YOU MORE POINTS!\n\n\nCOMPLETING
+    THE SET ON YOUR WISHLIST WILL EARN YOU AN ADDITIONAL BONUS!\n"
 --- !u!1 &5520367529832309395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,10 +1017,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664508660
 MonoBehaviour:
@@ -1152,7 +1067,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5260850036963905400}
   - {fileID: 4193657909781185786}
   - {fileID: 1023186865410987256}
   - {fileID: 1878730079205882310}
@@ -1165,10 +1079,10 @@ RectTransform:
   m_Father: {fileID: 2878734325010876255}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.525, y: -7.4512}
-  m_SizeDelta: {x: 681.15, y: 212.3}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.00074768}
+  m_SizeDelta: {x: 1269.1, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &167452831129201409
 CanvasRenderer:
@@ -1191,7 +1105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8313726, g: 0.09411766, b: 0.31764707, a: 1}
+  m_Color: {r: 0.89019614, g: 0.19215688, b: 0.38431376, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1236,11 +1150,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8733753082926064609}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130.52502, y: -60.648796}
+  m_AnchoredPosition: {x: 138, y: -214}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3632403802275312842
@@ -1309,10 +1223,10 @@ RectTransform:
   - {fileID: 4452682424301670379}
   - {fileID: 5408904119425920098}
   m_Father: {fileID: 8733753082926064609}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.575006, y: 61.951202}
+  m_AnchoredPosition: {x: -13.100077, y: -91.40002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
