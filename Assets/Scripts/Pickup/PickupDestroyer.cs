@@ -6,6 +6,8 @@ public class PickupDestroyer : MonoBehaviour
 {
     [SerializeField]
     private GameObject destroyPickupParticle;
+    [SerializeField]
+    private AudioSource destroyPickupSound;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,7 @@ public class PickupDestroyer : MonoBehaviour
             {
                 Instantiate(destroyPickupParticle, pickup.transform.position, Quaternion.identity);
             }
+            destroyPickupSound.Play();
             Destroy(pickup.gameObject);
         }
     }

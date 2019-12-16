@@ -354,6 +354,7 @@ public class Player : Movable
 
     public void Respawn()
     {
+        Conveyor.RemoveFromConveyor(this);
         Instantiate(respawnParticles, transform.position, Quaternion.identity);
         transform.position = spawnPoint.transform.position;
         GameScreen.Instance.MakePlayerUISolid(playerNum);
