@@ -34,8 +34,8 @@ public class Player : Movable
     [SerializeField]
     private AudioSource dropItemSound;
 
-    //[SerializeField]
-    //private List<AudioSource> taunts;
+    [SerializeField]
+    private List<AudioSource> taunts;
     [SerializeField]
     private float tauntCooldown = 3f;
     private float currentTauntCooldown = 0f;
@@ -88,10 +88,10 @@ public class Player : Movable
             }
         }
 
-        //if(Input.GetButtonDown("Player" + playerNum + "Taunt"))
-        //{
-        //    Taunt();
-        //}
+        if (Input.GetButtonDown("Player" + playerNum + "Taunt"))
+        {
+            Taunt();
+        }
 
         if (tauntOnCooldown)
         {
@@ -316,16 +316,16 @@ public class Player : Movable
         PlayerFrozen = false;
     }
 
-    //private void Taunt()
-    //{
-    //    if (tauntOnCooldown == false)
-    //    {
-    //        int audioSourceToPlay = Random.Range(0, taunts.Count);
-    //        taunts[audioSourceToPlay].Play();
+    private void Taunt()
+    {
+        if (tauntOnCooldown == false)
+        {
+            int audioSourceToPlay = Random.Range(0, taunts.Count);
+            taunts[audioSourceToPlay].Play();
 
-    //        tauntOnCooldown = true;
-    //    }
-    //}
+            tauntOnCooldown = true;
+        }
+    }
 
     public void Kill()
     {
